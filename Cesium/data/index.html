@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>좌표로 주소를 얻어내기</title>
+    <style>
+        .map_wrap {position:relative;width:100%;height:350px;}
+        .title {font-weight:bold;display:block;}
+        .hAddr {position:absolute;left:10px;top:10px;border-radius: 2px;background:#fff;background:rgba(255,255,255,0.8);z-index:1;padding:5px;}
+        #centerAddr {display:block;margin-top:2px;font-weight: normal;}
+        .bAddr {padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+    </style>
+</head>
+<body>
+<div class="map_wrap">
+    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+    <div class="hAddr">
+        <span class="title">지도중심기준 행정동 주소정보</span>
+        <span id="centerAddr"></span>
+    </div>
+</div>
+<div id="data"></div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	d224dec811bbb4a1f1e22d239db5e48e&libraries=services"></script>
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        mapOption = {
+            center: new kakao.maps.LatLng(35.20577787034721, 129.07839286937156), // 지도의 중심좌표
+            level: 1 // 지도의 확대 레벨
+        };
+
+    // 지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    // 주소-좌표 변환 객체를 생성합니다
+    var geocoder = new kakao.maps.services.Geocoder();
+
+    function searchAddrFromCoords(coords, callback) {
+        // 좌표로 행정동 주소 정보를 요청합니다
+        geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback);
+    }
+
+    function searchDetailAddrFromCoords(coords, callback) {
+        // 좌표로 법정동 상세 주소 정보를 요청합니다
+        geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+    }
+
+    var printAddress = function(result, status){
+        if (status === kakao.maps.services.Status.OK) {
+
+            console.log('지역 명칭 : ' + result[0].address_name);
+            console.log('행정구역 코드 : ' + result[0].code);
+
+
+            document.getElementById("data").innerHTML += result[0].x+","+result[0].y+","+result[0].address_name+"<br>";
+        }
+    };
+
+    //지도에 사각형 점 sampling
+    sampleNum = 10;
+    for (lngIdx=0;lngIdx<=sampleNum;lngIdx++)
+        for(latIdx=0;latIdx<=sampleNum;latIdx++)
+        {
+            baseLat = 35.20577787034721;
+            baseLng = 129.07839286937156;
+            latWidth = 0.05;
+            lngWidth = 0.1;
+            currentLat = baseLat - 0.5*latWidth + latWidth*latIdx/sampleNum;
+            currentLng = baseLng - 0.5*lngWidth + lngWidth*lngIdx/sampleNum;
+
+            var circle = new kakao.maps.Circle({
+                center : new kakao.maps.LatLng(currentLat,currentLng ),  // 원의 중심좌표 입니다
+                radius: 100, // 미터 단위의 원의 반지름입니다
+                strokeWeight: 5, // 선의 두께입니다
+                strokeColor: '#FF0000', // 선의 색깔입니다
+                strokeOpacity: 1, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+                strokeStyle: 'dashed', // 선의 스타일 입니다
+                fillColor: '#FF0000', // 채우기 색깔입니다
+                fillOpacity: 1.0  // 채우기 불투명도 입니다
+            });
+            // 지도에 원을 표시합니다
+            circle.setMap(map);
+
+            var latlng = new kakao.maps.LatLng(currentLat, currentLng);
+            searchAddrFromCoords(latlng,printAddress);
+        }
+</script>
+
+</body>
+</html>

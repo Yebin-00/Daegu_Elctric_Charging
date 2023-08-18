@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>좌표로 주소를 얻어내기</title>
+    <style>
+        .map_wrap {
+            position: relative;
+            width: 100%;
+            height: 350px;
+        }
+
+        .title {
+            font-weight: bold;
+            display: block;
+        }
+
+        .hAddr {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            border-radius: 2px;
+            background: #fff;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+            padding: 5px;
+        }
+
+        #centerAddr {
+            display: block;
+            margin-top: 2px;
+            font-weight: normal;
+        }
+
+        .bAddr {
+            padding: 5px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+<div class="map_wrap">
+    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+    <div class="hAddr">
+        <span class="title">지도중심기준 행정동 주소정보</span>
+        <span id="centerAddr"></span>
+    </div>
+</div>
+<div id="data"></div>
+<script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	d224dec811bbb4a1f1e22d239db5e48e&libraries=services"></script>
+
+<script>
+    let num = 0;
+    let currentLat = 0;
+    let currentLng = 0;
+
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        mapOption = {
+            center: new kakao.maps.LatLng(35.871389, 128.601389), // 지도의 중심좌표
+            level: 1 // 지도의 확대 레벨
+        };
+
+    // 지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    // 주소-좌표 변환 객체를 생성합니다
+    var geocoder = new kakao.maps.services.Geocoder();
+
+    response = "";
+
+    function sleep(ms) {
+        const wakeUpTime = Date.now() + ms;
+        while (Date.now() < wakeUpTime) {
+        }
+    }
+
+    let start = 0;
+    let end = start + 1000;
+
+    const fetchData = async () => {
+        response = await fetch('a.txt');
+        ndata = [];
+        data = await response.json();
+        // data.length = 50;
+
+        // data.forEach(e=>{
+        //     if(ndata.length>10){
+        //         return;
+        //     }
+        //     if(e.addr===undefined){
+        //         ndata.push(e)
+        //     }
+        // })
+        // console.log("HEY");
+        pushData();
+        postProcess();
+
+    };
+
+    fetchData();
+
+    function pushData() {
+        ndata = [];
+        end = start + 1000;
+        for(let i=start;i<end;i++){
+            ndata.push(data[i]);
+        }
+    }
+
+    const wrappers = xy => {
+        return new Promise((resolve, reject) => {
+            geocoder.coord2Address(xy.getLng(), xy.getLat(), function (result, status) {
+                if (status === kakao.maps.services.Status.OK) {
+                    resolve(result);
+                } else {
+                    reject(status);
+                }
+            });
+        });
+    };
+
+    function reset(){
+        document.getElementById("data").innerHTML="";
+    }
+
+    function postProcess() {
+        let num = start;
+        ndata.forEach(function (element, index, array) {
+            currentLat = element.y;
+            currentLng = element.x-0.0025;
+            // currentNum = element.num;
+            var latlng = new kakao.maps.LatLng(currentLat, currentLng);
+            (async () => {
+                try {
+                    const result = await wrappers(latlng);
+                    {document.getElementById("data").innerHTML += (index+num) +" "+ latlng.getLat() + "," + latlng.getLng() + "," + result[0].address.address_name +","+result[0].address.region_2depth_name+ "<br>"};
+                    ndata[index].num = (index+num);
+                    ndata[index].addr = result[0].address.address_name;
+                    ndata[index].region = result[0].address.region_2depth_name;
+                    if(result[0].address.region_2depth_name=="중구"){
+                        ndata[index].fid = 1;
+                    }else if(result[0].address.region_2depth_name=="동구"){
+                        ndata[index].fid = 2;
+                    }else if(result[0].address.region_2depth_name=="서구"){
+                        ndata[index].fid = 3;
+                    }else if(result[0].address.region_2depth_name=="남구"){
+                        ndata[index].fid = 4;
+                    }else if(result[0].address.region_2depth_name=="북구"){
+                        ndata[index].fid = 5;
+                    }else if(result[0].address.region_2depth_name=="수성구"){
+                        ndata[index].fid = 6;
+                    }else if(result[0].address.region_2depth_name=="달서구"){
+                        ndata[index].fid = 7;
+                    }else if(result[0].address.region_2depth_name=="달성군"){
+                        ndata[index].fid = 8;
+                    }else{
+                        ndata[index].fid = 0;
+                    }
+
+                } catch (e) {
+                    console.log(e);
+                }
+            })();
+
+
+        });
+    }
+
+    function saveData() {
+        var jsonData = JSON.stringify(ndata);
+
+        function download(content, fileName, contentType) {
+            var a = document.createElement("a");
+            var file = new Blob([content], {type: contentType});
+            a.href = URL.createObjectURL(file);
+            a.download = fileName;
+            a.click();
+        }
+
+        download(jsonData, 'a.json', 'text/plain');
+    }
+</script>
+</body>
+</html>

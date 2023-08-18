@@ -1,0 +1,2960 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86844002,128.6017131 ]
+    },
+    "properties": {
+    "No":1,
+    "name":"국채보상운동기념공원주차장",
+    "addr":"대구광역시 중구 공평로10길 25",
+    "state":"정좌표",
+    "number":197,
+    "amount":3343
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87142631,128.6018555 ]
+    },
+    "properties": {
+    "No":2,
+    "name":"대구시청",
+    "addr":"대구광역시 중구 공평로 88",
+    "state":"정좌표",
+    "number":257,
+    "amount":4400
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86890633,128.5807711 ]
+    },
+    "properties": {
+    "No":3,
+    "name":"서문주차빌딩",
+    "addr":"대구광역시 중구 큰장로26길 45",
+    "state":"정좌표",
+    "number":353,
+    "amount":3815
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8693267,128.6061586 ]
+    },
+    "properties": {
+    "No":4,
+    "name":"중구청",
+    "addr":"대구광역시 중구 국채보상로139길 1",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8655529,128.5763395 ]
+    },
+    "properties": {
+    "No":5,
+    "name":"대신동 행정복지센터",
+    "addr":"대구광역시 중구 달구벌대로389길 50",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85991179,128.5855595 ]
+    },
+    "properties": {
+    "No":6,
+    "name":"남산3동 행정복지센터",
+    "addr":"대구광역시 중구 남산로4길 70",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86408255,128.5895594 ]
+    },
+    "properties": {
+    "No":7,
+    "name":"남산2동 행정복지센터",
+    "addr":"대구광역시 중구 명륜로 27-1",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85876412,128.5993683 ]
+    },
+    "properties": {
+    "No":8,
+    "name":"대봉2동 행정복지센터",
+    "addr":"대구광역시 중구 대봉로47길 31",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86790523,128.6091281 ]
+    },
+    "properties": {
+    "No":9,
+    "name":"동인동행정복지센터",
+    "addr":"대구광역시 중구 국채보상로142길 19-5",
+    "state":"정좌표",
+    "number":48,
+    "amount":1531
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8582235,128.5805722 ]
+    },
+    "properties": {
+    "No":10,
+    "name":"남산4동행정복지센터",
+    "addr":"대구광역시 중구 남산로1길 42",
+    "state":"정좌표",
+    "number":17,
+    "amount":235
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86552799,128.6089427 ]
+    },
+    "properties": {
+    "No":11,
+    "name":"삼덕동행정복지센터",
+    "addr":"대구광역시 중구 달구벌대로447길 72-11",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87142631,128.6018555 ]
+    },
+    "properties": {
+    "No":12,
+    "name":"대구시청(지하)",
+    "addr":"대구광역시 중구 공평로 88 (지하 주차장)",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.97014201,128.7252083 ]
+    },
+    "properties": {
+    "No":13,
+    "name":"갓바위공영3주차장",
+    "addr":"대구광역시 동구 진인동 123-30",
+    "state":"정좌표",
+    "number":43,
+    "amount":539
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.97058955,128.7260827 ]
+    },
+    "properties": {
+    "No":14,
+    "name":"갓바위공영5주차장",
+    "addr":"대구광역시 동구 진인동 123-12",
+    "state":"정좌표",
+    "number":49,
+    "amount":1119
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88681372,128.6360766 ]
+    },
+    "properties": {
+    "No":15,
+    "name":"동구청",
+    "addr":"대구광역시 동구 아양로 207",
+    "state":"정좌표",
+    "number":215,
+    "amount":4481
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87703362,128.629195 ]
+    },
+    "properties": {
+    "No":16,
+    "name":"동대구복합환승센터",
+    "addr":"대구광역시 동구 동부로 153",
+    "state":"인근좌표",
+    "number":194,
+    "amount":3458
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85992562,128.6928376 ]
+    },
+    "properties": {
+    "No":17,
+    "name":"율하체육공원3주차장",
+    "addr":"대구광역시 동구 금호강변로 278",
+    "state":"정좌표",
+    "number":173,
+    "amount":3813
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87864028,128.7361271 ]
+    },
+    "properties": {
+    "No":18,
+    "name":"첨단의료산업진흥재단",
+    "addr":"대구광역시 동구 동내로 88 커뮤니케이션센터 야외 주차장",
+    "state":"정좌표",
+    "number":137,
+    "amount":3314
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86863045,128.6814003 ]
+    },
+    "properties": {
+    "No":19,
+    "name":"환경공단안심관리소",
+    "addr":"대구광역시 동구 금호강변로 91",
+    "state":"정좌표",
+    "number":187,
+    "amount":2725
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.9191,128.6402955 ]
+    },
+    "properties": {
+    "No":20,
+    "name":"DTC섬유박물관",
+    "addr":"대구광역시 동구 팔공로 227",
+    "state":"정좌표",
+    "number":137,
+    "amount":2982
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87261017,128.7021116 ]
+    },
+    "properties": {
+    "No":21,
+    "name":"반야월공영주차장",
+    "addr":"대구광역시 동구 신기동 174",
+    "state":"정좌표",
+    "number":38,
+    "amount":869
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.99090071,128.6371583 ]
+    },
+    "properties": {
+    "No":22,
+    "name":"파계사 공영주차장",
+    "addr":"대구광역시 동구 파계로 686",
+    "state":"정좌표",
+    "number":89,
+    "amount":1693
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.90997716,128.6501302 ]
+    },
+    "properties": {
+    "No":23,
+    "name":"도평동 행정복지센터",
+    "addr":"대구광역시 동구 팔공로24길 171",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87027633,128.7112177 ]
+    },
+    "properties": {
+    "No":24,
+    "name":"안심3.4동 행정복지센터",
+    "addr":"대구광역시 동구 안심로49길 98",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87043122,128.7016306 ]
+    },
+    "properties": {
+    "No":25,
+    "name":"안심1동 행정복지센터",
+    "addr":"대구광역시 동구 율하동로 25길 5",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88208456,128.6716753 ]
+    },
+    "properties": {
+    "No":26,
+    "name":"해안동 행정복지센터",
+    "addr":"대구광역시 동구 방촌로29길 46",
+    "state":"정좌표",
+    "number":111,
+    "amount":2335
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88993705,128.6496353 ]
+    },
+    "properties": {
+    "No":27,
+    "name":"동촌동 행정복지센터",
+    "addr":"대구광역시 동구 동촌로11길 5",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88003395,128.6652561 ]
+    },
+    "properties": {
+    "No":28,
+    "name":"방촌동 행정복지센터",
+    "addr":"대구광역시 동구 동촌로48길 26",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88162786,128.6449371 ]
+    },
+    "properties": {
+    "No":29,
+    "name":"효목1동 행정복지센터",
+    "addr":"대구광역시 동구 화랑로41길 46",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87900153,128.6498559 ]
+    },
+    "properties": {
+    "No":30,
+    "name":"동촌유원지 입구 주차장",
+    "addr":"대구광역시 동구 효목동 1025",
+    "state":"정좌표",
+    "number":96,
+    "amount":2270
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87997896,128.6127016 ]
+    },
+    "properties": {
+    "No":31,
+    "name":"신암2동 행정복지센터",
+    "addr":"대구광역시 동구 신성로 56",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8809946,128.6146226 ]
+    },
+    "properties": {
+    "No":32,
+    "name":"대구은행(신암동지점)",
+    "addr":"대구광역시 동구 아양로 2",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.89610929,128.6410127 ]
+    },
+    "properties": {
+    "No":33,
+    "name":"아주운수",
+    "addr":"대구광역시 동구 공항로 255",
+    "state":"정좌표",
+    "number":26,
+    "amount":213
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87325113,128.6248046 ]
+    },
+    "properties": {
+    "No":34,
+    "name":"대구지식서비스센터",
+    "addr":"대구광역시 동구 동대구로 481",
+    "state":"정좌표",
+    "number":109,
+    "amount":2653
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8710745,128.6249677 ]
+    },
+    "properties": {
+    "No":35,
+    "name":"상공회의소",
+    "addr":"대구광역시 동구 동대구로 457",
+    "state":"정좌표",
+    "number":244,
+    "amount":4710
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88768408,128.622617 ]
+    },
+    "properties": {
+    "No":36,
+    "name":"신암공원",
+    "addr":"대구광역시 동구 신암북로11길 6",
+    "state":"정좌표",
+    "number":131,
+    "amount":2801
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87956399,128.6519363 ]
+    },
+    "properties": {
+    "No":37,
+    "name":"아양아트센터",
+    "addr":"대구광역시 동구 효동로2길 24",
+    "state":"정좌표",
+    "number":251,
+    "amount":5617
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.91038821,128.6392894 ]
+    },
+    "properties": {
+    "No":38,
+    "name":"불로봉무동행정복지센터",
+    "addr":"대구광역시 동구 팔공로25길 16",
+    "state":"정좌표",
+    "number":5,
+    "amount":109
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8933933,128.6382828 ]
+    },
+    "properties": {
+    "No":39,
+    "name":"지저동행정복지센터",
+    "addr":"대구광역시 동구 해동로3길 80",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87815834,128.6412399 ]
+    },
+    "properties": {
+    "No":40,
+    "name":"효목2동행정복지센터",
+    "addr":"대구광역시 동구 화랑로25길 45",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.93998708,128.6441612 ]
+    },
+    "properties": {
+    "No":41,
+    "name":"공산동행정복지센터",
+    "addr":"대구광역시 동구 팔공로91길 9",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88428962,128.6163403 ]
+    },
+    "properties": {
+    "No":42,
+    "name":"신암1동행정복지센터",
+    "addr":"대구광역시 동구 아양로7길 27",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85969545,128.5400736 ]
+    },
+    "properties": {
+    "No":43,
+    "name":"대구의료원",
+    "addr":"대구광역시 서구 평리로 157",
+    "state":"정좌표",
+    "number":115,
+    "amount":6341
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87341174,128.5409867 ]
+    },
+    "properties": {
+    "No":44,
+    "name":"서구국민체육센터",
+    "addr":"대구광역시 서구 문화로 72",
+    "state":"정좌표",
+    "number":129,
+    "amount":1555
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87232195,128.5592895 ]
+    },
+    "properties": {
+    "No":45,
+    "name":"서구청",
+    "addr":"대구광역시 서구 국채보상로 257",
+    "state":"정좌표",
+    "number":212,
+    "amount":3566
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88497189,128.5316981 ]
+    },
+    "properties": {
+    "No":46,
+    "name":"충전인프라 관제센터",
+    "addr":"대구광역시 서구 상리동 649-5",
+    "state":"정좌표",
+    "number":147,
+    "amount":3231
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88407908,128.5427216 ]
+    },
+    "properties": {
+    "No":47,
+    "name":"대구환경공단(달서천)",
+    "addr":"대구광역시 서구 염색공단로 130",
+    "state":"인근좌표",
+    "number":85,
+    "amount":1635
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86698037,128.5461515 ]
+    },
+    "properties": {
+    "No":48,
+    "name":"상중이동 행정복지센터",
+    "addr":"대구광역시 서구 중리동 1085-3",
+    "state":"정좌표",
+    "number":166,
+    "amount":4099
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86851172,128.5447467 ]
+    },
+    "properties": {
+    "No":49,
+    "name":"서대구산업단지 근로자복지회관",
+    "addr":"대구광역시 서구 국채보상로 124",
+    "state":"정좌표",
+    "number":39,
+    "amount":1303
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88117185,128.5689707 ]
+    },
+    "properties": {
+    "No":50,
+    "name":"비산1동행정복지센터",
+    "addr":"대구광역시 서구 북비산로65길 18(비산동)",
+    "state":"정좌표",
+    "number":21,
+    "amount":540
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87595554,128.5613 ]
+    },
+    "properties": {
+    "No":51,
+    "name":"평리3동행정복지센터",
+    "addr":"대구광역시 서구 문화로 261(평리동)",
+    "state":"정좌표",
+    "number":23,
+    "amount":646
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8755956,128.5632615 ]
+    },
+    "properties": {
+    "No":52,
+    "name":"평리1동행정복지센터",
+    "addr":"대구광역시 서구 문화로 280(평리동)",
+    "state":"정좌표",
+    "number":5,
+    "amount":53
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86974988,128.5743028 ]
+    },
+    "properties": {
+    "No":53,
+    "name":"비산4동행정복지센터",
+    "addr":"대구광역시 서구 국채보상로78길 29-4(비산동)",
+    "state":"정좌표",
+    "number":3,
+    "amount":53
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86727753,128.5745339 ]
+    },
+    "properties": {
+    "No":54,
+    "name":"내당2,3동행정복지센터",
+    "addr":"대구광역시 서구 큰장로15길 11-1(내당동)",
+    "state":"정좌표",
+    "number":30,
+    "amount":1102
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85902049,128.5518431 ]
+    },
+    "properties": {
+    "No":55,
+    "name":"내당4동행정복지센터",
+    "addr":"대구광역시 서구 서대구로3길 46",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86309633,128.5339748 ]
+    },
+    "properties": {
+    "No":56,
+    "name":"상리공원주차장",
+    "addr":"대구광역시 서구 중리동 1177",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88795925,128.5535552 ]
+    },
+    "properties": {
+    "No":57,
+    "name":"비산7동행정복지센터",
+    "addr":"대구광역시 서구 서구 염색공단로5길 4",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8322445,128.5837349 ]
+    },
+    "properties": {
+    "No":58,
+    "name":"충혼탑 주차장",
+    "addr":"대구광역시 남구 앞산순환로 540",
+    "state":"정좌표",
+    "number":336,
+    "amount":5589
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85230256,128.5790577 ]
+    },
+    "properties": {
+    "No":59,
+    "name":"대명3동 행정복지센터",
+    "addr":"대구광역시 남구 명덕로20길 115",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85515365,128.5863225 ]
+    },
+    "properties": {
+    "No":60,
+    "name":"대명2동 행정복지센터",
+    "addr":"대구광역시 남구 명덕로32길 30",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84552398,128.5978346 ]
+    },
+    "properties": {
+    "No":61,
+    "name":"남구청",
+    "addr":"대구광역시 남구 이천로 51",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84241851,128.5959412 ]
+    },
+    "properties": {
+    "No":62,
+    "name":"봉덕3동 행정복지센터",
+    "addr":"대구광역시 남구 중앙대로22길 100",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84323175,128.5878028 ]
+    },
+    "properties": {
+    "No":63,
+    "name":"대명5동 행정복지센터",
+    "addr":"대구광역시 남구 대명로58길 11",
+    "state":"정좌표",
+    "number":125,
+    "amount":3200
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84597103,128.5695084 ]
+    },
+    "properties": {
+    "No":64,
+    "name":"대명4동 행정복지센터",
+    "addr":"대구광역시 남구 두류공원로20길 19",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83624168,128.5606365 ]
+    },
+    "properties": {
+    "No":65,
+    "name":"대명11동 행정복지센터",
+    "addr":"대구광역시 남구 관문시장4길 53",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85368218,128.5994185 ]
+    },
+    "properties": {
+    "No":66,
+    "name":"이천동행정복지센터",
+    "addr":"대구광역시 남구 이천로28길 18(이천동)",
+    "state":"정좌표",
+    "number":15,
+    "amount":349
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84382728,128.6011109 ]
+    },
+    "properties": {
+    "No":67,
+    "name":"봉덕2동행정복지센터",
+    "addr":"대구광역시 남구 이천로10길 50(봉덕동)",
+    "state":"정좌표",
+    "number":27,
+    "amount":631
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8372365,128.5790238 ]
+    },
+    "properties": {
+    "No":68,
+    "name":"대명9동행정복지센터",
+    "addr":"대구광역시 남구 큰골길 53(대명동)",
+    "state":"정좌표",
+    "number":45,
+    "amount":830
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.9021357,128.5425318 ]
+    },
+    "properties": {
+    "No":69,
+    "name":"농수산물도매시장",
+    "addr":"대구광역시 북구 매천로18길 34",
+    "state":"정좌표",
+    "number":268,
+    "amount":5685
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.91387816,128.5427922 ]
+    },
+    "properties": {
+    "No":70,
+    "name":"매천역환승공영주차장",
+    "addr":"대구광역시 북구 태전동 881-10",
+    "state":"정좌표",
+    "number":110,
+    "amount":3553
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88545422,128.5833045 ]
+    },
+    "properties": {
+    "No":71,
+    "name":"북구청",
+    "addr":"대구광역시 북구 옥산로 65",
+    "state":"정좌표",
+    "number":302,
+    "amount":7426
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.89115552,128.5970876 ]
+    },
+    "properties": {
+    "No":72,
+    "name":"시청별관",
+    "addr":"대구광역시 북구 연암로 60",
+    "state":"정좌표",
+    "number":395,
+    "amount":9693
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.90549122,128.6119922 ]
+    },
+    "properties": {
+    "No":73,
+    "name":"올브랜 주차장",
+    "addr":"대구광역시 북구 산격동 1671",
+    "state":"정좌표",
+    "number":27,
+    "amount":759
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.90617925,128.6117412 ]
+    },
+    "properties": {
+    "No":74,
+    "name":"패션센터 주차장",
+    "addr":"대구광역시 북구 유통단지로 14길 17",
+    "state":"정좌표",
+    "number":105,
+    "amount":2043
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.94104958,128.5446932 ]
+    },
+    "properties": {
+    "No":75,
+    "name":"관음공영주차장",
+    "addr":"대구광역시 북구 관음중앙로 80",
+    "state":"정좌표",
+    "number":79,
+    "amount":2106
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.89318837,128.6175054 ]
+    },
+    "properties": {
+    "No":76,
+    "name":"복현장미공원공영주차장",
+    "addr":"대구광역시 북구 복현동 439-1",
+    "state":"정좌표",
+    "number":74,
+    "amount":1880
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.9216739,128.5494828 ]
+    },
+    "properties": {
+    "No":77,
+    "name":"대구 부광교회",
+    "addr":"대구광역시 북구 칠곡중앙대로52길38",
+    "state":"정좌표",
+    "number":314,
+    "amount":7163
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.93893254,128.566041 ]
+    },
+    "properties": {
+    "No":78,
+    "name":"구암동 행정복지센터",
+    "addr":"대구광역시 북구 구암서로 32",
+    "state":"정좌표",
+    "number":217,
+    "amount":5032
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.93450683,128.5393414 ]
+    },
+    "properties": {
+    "No":79,
+    "name":"한국도로공사 칠곡영업소",
+    "addr":"대구광역시 북구 관음로 41",
+    "state":"정좌표",
+    "number":133,
+    "amount":2943
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.92413288,128.5434037 ]
+    },
+    "properties": {
+    "No":80,
+    "name":"태전1동 행정복지센터",
+    "addr":"대구광역시 북구 태전로7길 10-24",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.92799875,128.5979483 ]
+    },
+    "properties": {
+    "No":81,
+    "name":"유니버시아드 레포츠센터",
+    "addr":"대구광역시 북구 호국로57길 6",
+    "state":"정좌표",
+    "number":99,
+    "amount":2742
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.9213512,128.5970445 ]
+    },
+    "properties": {
+    "No":82,
+    "name":"무태조야동 행정복지센터",
+    "addr":"대구광역시 북구 호국로43길 20",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.90205856,128.5769348 ]
+    },
+    "properties": {
+    "No":83,
+    "name":"아이빌",
+    "addr":"대구광역시 북구 3공단로 240",
+    "state":"정좌표",
+    "number":71,
+    "amount":1367
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.89290315,128.6030172 ]
+    },
+    "properties": {
+    "No":84,
+    "name":"대구체육관 주차장",
+    "addr":"대구광역시 북구 대구체육관로 39",
+    "state":"정좌표",
+    "number":172,
+    "amount":3521
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.89440759,128.5715294 ]
+    },
+    "properties": {
+    "No":85,
+    "name":"대구은행(3공단지점)",
+    "addr":"대구광역시 북구 노원동로 2",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88946123,128.5904541 ]
+    },
+    "properties": {
+    "No":86,
+    "name":"명성 푸르지오",
+    "addr":"대구광역시 북구 침산로 153",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88562917,128.5868909 ]
+    },
+    "properties": {
+    "No":87,
+    "name":"침산1차 푸르지오",
+    "addr":"대구광역시 북구 침산로21길 23",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88445306,128.5882181 ]
+    },
+    "properties": {
+    "No":88,
+    "name":"대구은행 제2본점영업부",
+    "addr":"대구광역시 북구 옥산로 111",
+    "state":"정좌표",
+    "number":53,
+    "amount":1148
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88185509,128.5835145 ]
+    },
+    "properties": {
+    "No":89,
+    "name":"고성동 행정복지센터",
+    "addr":"대구광역시 북구 고성로31길 21",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.91130567,128.524326 ]
+    },
+    "properties": {
+    "No":90,
+    "name":"대구사격장",
+    "addr":"대구광역시 북구 문주길 170",
+    "state":"정좌표",
+    "number":10,
+    "amount":297
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8954766,128.5175555 ]
+    },
+    "properties": {
+    "No":91,
+    "name":"동림플라자",
+    "addr":"대구광역시 북구 한강로8길 20",
+    "state":"정좌표",
+    "number":199,
+    "amount":5840
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.90720333,128.6070181 ]
+    },
+    "properties": {
+    "No":92,
+    "name":"대구유통단지 전자관",
+    "addr":"대구광역시 북구 유통단지로 45",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.93129033,128.563765 ]
+    },
+    "properties": {
+    "No":93,
+    "name":"운암지 공영주차장",
+    "addr":"대구광역시 북구 구암동 415-2",
+    "state":"인근좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.88110679,128.6057727 ]
+    },
+    "properties": {
+    "No":94,
+    "name":"대현동 행정복지센터",
+    "addr":"대구광역시 북구 대현남로 25",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.90245507,128.5797145 ]
+    },
+    "properties": {
+    "No":95,
+    "name":"대구지식산업센터",
+    "addr":"대구광역시 북구 오봉로 164",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.93732745,128.5581816 ]
+    },
+    "properties": {
+    "No":96,
+    "name":"동천동행정복지센터",
+    "addr":"대구광역시 북구 대천로 81(동천동)",
+    "state":"정좌표",
+    "number":57,
+    "amount":1825
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.94425419,128.5473269 ]
+    },
+    "properties": {
+    "No":97,
+    "name":"관음동행정복지센터",
+    "addr":"대구광역시 북구 관음동로 125 (관음동)",
+    "state":"정좌표",
+    "number":43,
+    "amount":1191
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.9134626,128.6272161 ]
+    },
+    "properties": {
+    "No":98,
+    "name":"검단동행정복지센터",
+    "addr":"대구광역시 북구 검단로41길 12 (검단동)",
+    "state":"정좌표",
+    "number":11,
+    "amount":401
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.90173502,128.6092565 ]
+    },
+    "properties": {
+    "No":99,
+    "name":"산격2동행정복지센터",
+    "addr":"대구광역시 북구 동북로31길 30",
+    "state":"정좌표",
+    "number":15,
+    "amount":474
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.89536208,128.6254885 ]
+    },
+    "properties": {
+    "No":100,
+    "name":"복현2동행정복지센터",
+    "addr":"대구광역시 북구 복현로8길 16-5",
+    "state":"정좌표",
+    "number":36,
+    "amount":1153
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.92149203,128.5487627 ]
+    },
+    "properties": {
+    "No":101,
+    "name":"태전2동행정복지센터",
+    "addr":"대구광역시 북구 칠곡중앙대로52길 32",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.90051355,128.5971032 ]
+    },
+    "properties": {
+    "No":102,
+    "name":"산격1동행정복지센터",
+    "addr":"대구광역시 북구 연암로36길 6",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87922469,128.6000193 ]
+    },
+    "properties": {
+    "No":103,
+    "name":"칠성동행정복지센터",
+    "addr":"대구광역시 북구 칠성로19길 4",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.82838917,128.624544 ]
+    },
+    "properties": {
+    "No":104,
+    "name":"두산오거리(두산스포츠 북동편 도로 면)",
+    "addr":"대구광역시 수성구 두산동 954-14",
+    "state":"인근좌표",
+    "number":67,
+    "amount":2137
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85835349,128.6300208 ]
+    },
+    "properties": {
+    "No":105,
+    "name":"수성구청",
+    "addr":"대구광역시 수성구 달구벌대로 2450",
+    "state":"정좌표",
+    "number":223,
+    "amount":3.715
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85993244,128.6213958 ]
+    },
+    "properties": {
+    "No":106,
+    "name":"수성대학교 입구 우",
+    "addr":"대구광역시 수성구 달구벌대로 529길",
+    "state":"인근좌표",
+    "number":53,
+    "amount":1717
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85594966,128.6501243 ]
+    },
+    "properties": {
+    "No":107,
+    "name":"수성대학교 입구 좌",
+    "addr":"대구광역시 수성구 달구벌대로 528길",
+    "state":"인근좌표",
+    "number":74,
+    "amount":2372
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84135706,128.7060374 ]
+    },
+    "properties": {
+    "No":108,
+    "name":"시지근린공원(누리타운 서편 도로면)",
+    "addr":"대구광역시 수성구 달구벌대로 637길 5",
+    "state":"정좌표",
+    "number":46,
+    "amount":1594
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84767227,128.6270136 ]
+    },
+    "properties": {
+    "No":109,
+    "name":"어린이회관",
+    "addr":"대구광역시 수성구 동대구로 176",
+    "state":"정좌표",
+    "number":65,
+    "amount":1330
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.82702862,128.6743403 ]
+    },
+    "properties": {
+    "No":110,
+    "name":"외환들공영주차장",
+    "addr":"대구광역시 수성구 미술관로 40",
+    "state":"정좌표",
+    "number":22,
+    "amount":221
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86663137,128.639751 ]
+    },
+    "properties": {
+    "No":111,
+    "name":"차량등록사업소1",
+    "addr":"대구광역시 수성구 동원로 84",
+    "state":"정좌표",
+    "number":229,
+    "amount":3979
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.81146986,128.6221493 ]
+    },
+    "properties": {
+    "No":112,
+    "name":"파동교네거리주차장",
+    "addr":"대구광역시 수성구 파동 274",
+    "state":"정좌표",
+    "number":253,
+    "amount":6018
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.82937438,128.6205773 ]
+    },
+    "properties": {
+    "No":113,
+    "name":"대구환경공단(지산)",
+    "addr":"대구광역시 수성구 무학로 112",
+    "state":"정좌표",
+    "number":201,
+    "amount":4190
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86663137,128.639751 ]
+    },
+    "properties": {
+    "No":114,
+    "name":"차량등록사업소(본소)",
+    "addr":"대구광역시 수성구 동원로 84",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84397692,128.6381409 ]
+    },
+    "properties": {
+    "No":115,
+    "name":"황금1동 행정복지센터",
+    "addr":"대구광역시 수성구 청호로57길 10",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.82598913,128.6098758 ]
+    },
+    "properties": {
+    "No":116,
+    "name":"대구은행 파동지점",
+    "addr":"대구광역시 수성구 수성로 5",
+    "state":"정좌표",
+    "number":162,
+    "amount":4134
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8209278,128.6376097 ]
+    },
+    "properties": {
+    "No":117,
+    "name":"지산근린공원 주차장",
+    "addr":"대구광역시 수성구 용학로 267",
+    "state":"정좌표",
+    "number":83,
+    "amount":1693
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83460957,128.6939786 ]
+    },
+    "properties": {
+    "No":118,
+    "name":"수성의료지구",
+    "addr":"대구광역시 수성구 노변동 544-1",
+    "state":"인근좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85793869,128.6586517 ]
+    },
+    "properties": {
+    "No":119,
+    "name":"명복공원 주차장",
+    "addr":"대구광역시 수성구 달구벌대로 541길 47",
+    "state":"정좌표",
+    "number":55,
+    "amount":1004
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84013416,128.7061657 ]
+    },
+    "properties": {
+    "No":120,
+    "name":"대구은행 시지지점",
+    "addr":"대구광역시 수성구 달구벌대로 3196",
+    "state":"정좌표",
+    "number":101,
+    "amount":2064
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.82928315,128.6282745 ]
+    },
+    "properties": {
+    "No":121,
+    "name":"수성아트피아",
+    "addr":"대구광역시 수성구 무학로 180",
+    "state":"정좌표",
+    "number":152,
+    "amount":3908
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83782917,128.6850322 ]
+    },
+    "properties": {
+    "No":122,
+    "name":"수성의료지구(대구도시공사)",
+    "addr":"대구광역시 수성구 대흥동 286-1",
+    "state":"인근좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85931475,128.6149475 ]
+    },
+    "properties": {
+    "No":123,
+    "name":"대구은행 본점",
+    "addr":"대구광역시 수성구 달구벌대로 2310",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84611814,128.623415 ]
+    },
+    "properties": {
+    "No":124,
+    "name":"KS택시",
+    "addr":"대구광역시 수성구 희망로 226",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.835319,128.6824493 ]
+    },
+    "properties": {
+    "No":125,
+    "name":"저소득층 밀집지구 지식산업센터",
+    "addr":"대구광역시 수성구 알파시티1로 160",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85986045,128.647228 ]
+    },
+    "properties": {
+    "No":126,
+    "name":"만촌2동행정복지센터",
+    "addr":"대구광역시 수성구 무열로 12",
+    "state":"정좌표",
+    "number":15,
+    "amount":233
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85550223,128.6505651 ]
+    },
+    "properties": {
+    "No":127,
+    "name":"만촌3동행정복지센터",
+    "addr":"대구광역시 수성구 교학로2길 45",
+    "state":"정좌표",
+    "number":51,
+    "amount":787
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8473452,128.6150885 ]
+    },
+    "properties": {
+    "No":128,
+    "name":"중동행정복지센터",
+    "addr":"대구광역시 수성구 수성로50길 38",
+    "state":"정좌표",
+    "number":56,
+    "amount":831
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83212667,128.6154609 ]
+    },
+    "properties": {
+    "No":129,
+    "name":"상동행정복지센터",
+    "addr":"대구광역시 수성구 들안로9길 56",
+    "state":"정좌표",
+    "number":25,
+    "amount":1110
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.82491392,128.6370066 ]
+    },
+    "properties": {
+    "No":130,
+    "name":"지산1동행정복지센터",
+    "addr":"대구광역시 수성구 지범로21길 16",
+    "state":"정좌표",
+    "number":70,
+    "amount":1540
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84347596,128.695185 ]
+    },
+    "properties": {
+    "No":131,
+    "name":"고산2동행정복지센터",
+    "addr":"대구광역시 수성구 달구벌대로 3091",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84393916,128.7065707 ]
+    },
+    "properties": {
+    "No":132,
+    "name":"고산3동행정복지센터",
+    "addr":"대구광역시 수성구 고산로 152",
+    "state":"정좌표",
+    "number":25,
+    "amount":765
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83284488,128.7094206 ]
+    },
+    "properties": {
+    "No":133,
+    "name":"신매공원노상주자창",
+    "addr":"대구광역시 수성구 신매동 590-1(도로변)",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85552855,128.6220458 ]
+    },
+    "properties": {
+    "No":134,
+    "name":"범어1동행정복지센터",
+    "addr":"대구광역시 수성구 범어천로 97",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.82312125,128.6280129 ]
+    },
+    "properties": {
+    "No":135,
+    "name":"지산2동행정복지센터",
+    "addr":"대구광역시 수성구 용학로33길 9",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.81775147,128.6459743 ]
+    },
+    "properties": {
+    "No":136,
+    "name":"범물1동행정복지센터",
+    "addr":"대구광역시 수성구 범안로 76",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84347596,128.695185 ]
+    },
+    "properties": {
+    "No":137,
+    "name":"수성소방서",
+    "addr":"대구 수성구 달구벌대로 3091",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.82952502,128.5322939 ]
+    },
+    "properties": {
+    "No":138,
+    "name":"달서구청",
+    "addr":"대구광역시 달서구 학산로 45",
+    "state":"정좌표",
+    "number":247,
+    "amount":4667
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.81910359,128.5404334 ]
+    },
+    "properties": {
+    "No":139,
+    "name":"대구도시철도공사",
+    "addr":"대구광역시 달서구 월배로 250",
+    "state":"정좌표",
+    "number":168,
+    "amount":3778
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84454462,128.5615941 ]
+    },
+    "properties": {
+    "No":140,
+    "name":"두류공원(성당휴게소)",
+    "addr":"대구광역시 달서구 공원순환로 216",
+    "state":"정좌표",
+    "number":302,
+    "amount":3897
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85183165,128.5285975 ]
+    },
+    "properties": {
+    "No":141,
+    "name":"서부법원 앞(롯데캐슬입구)",
+    "addr":"대구광역시 달서구 용산동 230-5",
+    "state":"정좌표",
+    "number":193,
+    "amount":3974
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83242591,128.4955466 ]
+    },
+    "properties": {
+    "No":142,
+    "name":"성서체육공원주차장",
+    "addr":"대구광역시 달서구 성서공단로22길 25",
+    "state":"정좌표",
+    "number":100,
+    "amount":2431
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84945335,128.5274057 ]
+    },
+    "properties": {
+    "No":143,
+    "name":"성서홈플러스",
+    "addr":"대구광역시 달서구 달구벌대로 1467",
+    "state":"정좌표",
+    "number":42,
+    "amount":816
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83466285,128.4887377 ]
+    },
+    "properties": {
+    "No":144,
+    "name":"시설안전관리사업소",
+    "addr":"대구광역시 달서구 성서공단로 58",
+    "state":"정좌표",
+    "number":173,
+    "amount":3431
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.79890606,128.5489498 ]
+    },
+    "properties": {
+    "No":145,
+    "name":"월광수변공원주차장",
+    "addr":"대구광역시 달서구 도원동 928",
+    "state":"정좌표",
+    "number":144,
+    "amount":2722
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.823318,128.4959611 ]
+    },
+    "properties": {
+    "No":146,
+    "name":"대구환경공단(본부)",
+    "addr":"대구광역시 달서구 대천동 770",
+    "state":"정좌표",
+    "number":153,
+    "amount":1641
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85843009,128.5229904 ]
+    },
+    "properties": {
+    "No":147,
+    "name":"용산2동 행정복지센터",
+    "addr":"대구광역시 달서구 선원로 278",
+    "state":"정좌표",
+    "number":156,
+    "amount":3930
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85330182,128.5078593 ]
+    },
+    "properties": {
+    "No":148,
+    "name":"차량등록사업소 서부분소",
+    "addr":"대구광역시 달서구 성서로 400",
+    "state":"정좌표",
+    "number":252,
+    "amount":4674
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84502695,128.5466934 ]
+    },
+    "properties": {
+    "No":149,
+    "name":"성당두산위브",
+    "addr":"대구광역시 달서구 당산로 82",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84101301,128.5431652 ]
+    },
+    "properties": {
+    "No":150,
+    "name":"본리동 행정복지센터",
+    "addr":"대구광역시 달서구 당산로 37-14",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83690545,128.5474142 ]
+    },
+    "properties": {
+    "No":151,
+    "name":"대구은행 본리동지점",
+    "addr":"대구광역시 달서구 구마로 180",
+    "state":"정좌표",
+    "number":103,
+    "amount":2429
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83278771,128.5455818 ]
+    },
+    "properties": {
+    "No":152,
+    "name":"송현2동 행정복지센터",
+    "addr":"대구광역시 달서구 월배로83길 120-14",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.806398,128.5176797 ]
+    },
+    "properties": {
+    "No":153,
+    "name":"수목원삼성래미안",
+    "addr":"대구광역시 달서구 상화로8길 23",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8120305,128.5227378 ]
+    },
+    "properties": {
+    "No":154,
+    "name":"진천동 행정복지센터",
+    "addr":"대구광역시 달서구 진천동 626-31",
+    "state":"정좌표",
+    "number":182,
+    "amount":3699
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.81478641,128.5262531 ]
+    },
+    "properties": {
+    "No":155,
+    "name":"대구은행(월배지점)",
+    "addr":"대구광역시 달서구 월배로 109",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.82190898,128.5548763 ]
+    },
+    "properties": {
+    "No":156,
+    "name":"대덕승마장",
+    "addr":"대구광역시 달서구 앞산순환로 206",
+    "state":"정좌표",
+    "number":40,
+    "amount":734
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84329402,128.5296275 ]
+    },
+    "properties": {
+    "No":157,
+    "name":"장기공영주차장",
+    "addr":"대구광역시 달서구 장기동 817-1",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.81278399,128.5489513 ]
+    },
+    "properties": {
+    "No":158,
+    "name":"월촌공원주차장",
+    "addr":"대구광역시 달서구 상인로 68-4",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.81910359,128.5404334 ]
+    },
+    "properties": {
+    "No":159,
+    "name":"대구도시철도공사2(대영)",
+    "addr":"대구광역시 달서구 월배로 250",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83285776,128.4882946 ]
+    },
+    "properties": {
+    "No":160,
+    "name":"대구테크노파크 신기술산업지원센터",
+    "addr":"대구광역시 달서구 성서공단로 46-17",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83775952,128.4795968 ]
+    },
+    "properties": {
+    "No":161,
+    "name":"상호림공원",
+    "addr":"대구광역시 달서구 호림동 1-6",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8566625,128.5312239 ]
+    },
+    "properties": {
+    "No":162,
+    "name":"용산1동행정복지센터",
+    "addr":"대구광역시 달서구 용산로 212-7",
+    "state":"정좌표",
+    "number":26,
+    "amount":626
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85102665,128.5421792 ]
+    },
+    "properties": {
+    "No":163,
+    "name":"감삼동행정복지센터",
+    "addr":"대구광역시 달서구 감삼북길 119-10",
+    "state":"정좌표",
+    "number":17,
+    "amount":463
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85568742,128.5721971 ]
+    },
+    "properties": {
+    "No":164,
+    "name":"두류1,2동행정복지센터",
+    "addr":"대구광역시 달서구 성당로51길 32",
+    "state":"정좌표",
+    "number":9,
+    "amount":190
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.84061372,128.5531474 ]
+    },
+    "properties": {
+    "No":165,
+    "name":"성당동행정복지센터",
+    "addr":"대구광역시 달서구 야외음악당로 38",
+    "state":"정좌표",
+    "number":23,
+    "amount":508
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83094908,128.5282742 ]
+    },
+    "properties": {
+    "No":166,
+    "name":"월성2동행정복지센터",
+    "addr":"대구광역시 달서구 월성로 65",
+    "state":"정좌표",
+    "number":44,
+    "amount":1343
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.83444093,128.541042 ]
+    },
+    "properties": {
+    "No":167,
+    "name":"본동행정복지센터",
+    "addr":"대구광역시 달서구 구마로26길 62",
+    "state":"정좌표",
+    "number":30,
+    "amount":1116
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.819515,128.5228367 ]
+    },
+    "properties": {
+    "No":168,
+    "name":"월성1동행정복지센터",
+    "addr":"대구광역시 달서구 조암남로 97",
+    "state":"정좌표",
+    "number":77,
+    "amount":1464
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.81255812,128.5362624 ]
+    },
+    "properties": {
+    "No":169,
+    "name":"상인2동행정복지센터",
+    "addr":"대구광역시 달서구 상원로 27",
+    "state":"정좌표",
+    "number":39,
+    "amount":785
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.81426535,128.5450096 ]
+    },
+    "properties": {
+    "No":170,
+    "name":"상인1동행정복지센터",
+    "addr":"대구광역시 달서구 상인서로 40",
+    "state":"정좌표",
+    "number":26,
+    "amount":352
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.82923413,128.5547573 ]
+    },
+    "properties": {
+    "No":171,
+    "name":"송현1동행정복지센터",
+    "addr":"대구광역시 달서구 중흥로8길 41",
+    "state":"정좌표",
+    "number":28,
+    "amount":650
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8074824,128.5321898 ]
+    },
+    "properties": {
+    "No":172,
+    "name":"도원동행정복지센터",
+    "addr":"대구광역시 달서구 한실로 53",
+    "state":"정좌표",
+    "number":35,
+    "amount":761
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.87222087,128.4942567 ]
+    },
+    "properties": {
+    "No":173,
+    "name":"다사읍행정복지센터 서재출장소",
+    "addr":"대구광역시 달성군 다사읍 서재본길 25",
+    "state":"정좌표",
+    "number":16,
+    "amount":507
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.80243192,128.6230237 ]
+    },
+    "properties": {
+    "No":174,
+    "name":"가창면행정복지센터",
+    "addr":"대구광역시 달성군 가창로 1100",
+    "state":"정좌표",
+    "number":67,
+    "amount":777
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.80423352,128.5007188 ]
+    },
+    "properties": {
+    "No":175,
+    "name":"화원읍행정복지센터",
+    "addr":"대구광역시 달성군 화원읍 비슬로 2594",
+    "state":"정좌표",
+    "number":40,
+    "amount":977
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.77418923,128.4204628 ]
+    },
+    "properties": {
+    "No":176,
+    "name":"논공읍행정복지센터",
+    "addr":"대구광역시 달성군 논공읍 비슬로 1779",
+    "state":"정좌표",
+    "number":10,
+    "amount":105
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.7893939,128.4634038 ]
+    },
+    "properties": {
+    "No":177,
+    "name":"옥포읍행정복지센터",
+    "addr":"대구광역시 달성군 옥포읍 비슬로 2215",
+    "state":"정좌표",
+    "number":9,
+    "amount":386
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.69724955,128.4475718 ]
+    },
+    "properties": {
+    "No":178,
+    "name":"현풍읍행정복지센터",
+    "addr":"대구광역시 달성군 현풍읍 비슬로134길 157",
+    "state":"정좌표",
+    "number":20,
+    "amount":480
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85896696,128.4988313 ]
+    },
+    "properties": {
+    "No":179,
+    "name":"신당동행정복지센터",
+    "addr":"대구광역시 달서구 선원로 60",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.85369882,128.5554702 ]
+    },
+    "properties": {
+    "No":180,
+    "name":"두류3동행정복지센터",
+    "addr":"대구광역시 달서구 야외음악당로39길 24",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.810066,128.5502024 ]
+    },
+    "properties": {
+    "No":181,
+    "name":"상인3동행정복지센터",
+    "addr":"대구광역시 달서구 상인로 25",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.81725189,128.5139384 ]
+    },
+    "properties": {
+    "No":182,
+    "name":"유천동 행정복지센터",
+    "addr":"대구광역시 달서구 조암로 175",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.73003901,128.4527824 ]
+    },
+    "properties": {
+    "No":183,
+    "name":"논공읍 논공공단출장소",
+    "addr":"대구광역시 달성군 논공읍 논공중앙로 33길 3",
+    "state":"정좌표",
+    "number":165,
+    "amount":2626
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.77466292,128.4313894 ]
+    },
+    "properties": {
+    "No":184,
+    "name":"달성군청",
+    "addr":"대구광역시 달성군 논공읍 달성군청로 33",
+    "state":"정좌표",
+    "number":134,
+    "amount":3423
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.68837343,128.4659878 ]
+    },
+    "properties": {
+    "No":185,
+    "name":"대구과학관",
+    "addr":"대구광역시 달성군 유가면 테크노대로6길 20",
+    "state":"정좌표",
+    "number":78,
+    "amount":1991
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8618255,128.4539695 ]
+    },
+    "properties": {
+    "No":186,
+    "name":"다사읍행정복지센터",
+    "addr":"대구광역시 달성군 다사읍 매곡로 7",
+    "state":"정좌표",
+    "number":253,
+    "amount":4958
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.7826012,128.4468507 ]
+    },
+    "properties": {
+    "No":187,
+    "name":"달성군 농업기술센터",
+    "addr":"대구광역시 달성군 옥포면 비슬로 2040",
+    "state":"정좌표",
+    "number":137,
+    "amount":2398
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.86387965,128.4384773 ]
+    },
+    "properties": {
+    "No":188,
+    "name":"문양역 야외주차장",
+    "addr":"대구광역시 달성군 다사읍 문양리 470",
+    "state":"정좌표",
+    "number":87,
+    "amount":1444
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.69364206,128.5039327 ]
+    },
+    "properties": {
+    "No":189,
+    "name":"비슬산자연휴양림공영주차장",
+    "addr":"대구광역시 달성군 유가면 용리15",
+    "state":"정좌표",
+    "number":12,
+    "amount":392
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.64094271,128.4194236 ]
+    },
+    "properties": {
+    "No":190,
+    "name":"한국산업단지 달성출장소",
+    "addr":"대구광역시 달성군 구지면 달성2차동1로 109",
+    "state":"정좌표",
+    "number":62,
+    "amount":1474
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.90126042,128.4455528 ]
+    },
+    "properties": {
+    "No":191,
+    "name":"하빈면 행정복지센터",
+    "addr":"대구광역시 달성군 하빈면 하빈로84길 1",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.89031671,128.4776988 ]
+    },
+    "properties": {
+    "No":192,
+    "name":"다사체육공원 주차장",
+    "addr":"대구광역시 달성군 다사읍 이천리 30-1",
+    "state":"정좌표",
+    "number":122,
+    "amount":2586
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.7893939,128.4634038 ]
+    },
+    "properties": {
+    "No":193,
+    "name":"옥포면 행정복지센터",
+    "addr":"대구광역시 달성군 옥포면 비슬로 2215",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.64517207,128.4048891 ]
+    },
+    "properties": {
+    "No":194,
+    "name":"지능형자동차부품연구원",
+    "addr":"대구광역시 달성군 구지면 국가산단서로 201",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.69433414,128.4596465 ]
+    },
+    "properties": {
+    "No":195,
+    "name":"유가읍행정복지센터",
+    "addr":"대구광역시 달성군 유가읍 테크노상업로 95",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.8654753,128.4609552 ]
+    },
+    "properties": {
+    "No":196,
+    "name":"달성문화센터",
+    "addr":"대구광역시 달성군 다사읍 대실역북로2길 188",
+    "state":"정좌표",
+    "number":136,
+    "amount":3470
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 35.81083359,128.501426 ]
+    },
+    "properties": {
+    "No":197,
+    "name":"한국도로공사(유천IC)",
+    "addr":"대구광역시 달성군 화원읍 구라리 1553-12",
+    "state":"정좌표",
+    "number":0,
+    "amount":0
+    }
+  }
+]
+}

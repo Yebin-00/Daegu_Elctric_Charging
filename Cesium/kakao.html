@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>좌표로 주소를 얻어내기</title>
+    <style>
+        .map_wrap {
+            position: relative;
+            width: 100%;
+            height: 350px;
+        }
+
+        .title {
+            font-weight: bold;
+            display: block;
+        }
+
+        .hAddr {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            border-radius: 2px;
+            background: #fff;
+            background: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+            padding: 5px;
+        }
+
+        #centerAddr {
+            display: block;
+            margin-top: 2px;
+            font-weight: normal;
+        }
+
+        .bAddr {
+            padding: 5px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map_wrap">
+        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+        <div class="hAddr">
+            <span class="title">지도중심기준 행정동 주소정보</span>
+            <span id="centerAddr"></span>
+        </div>
+    </div>
+    <div id="data"></div>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	d224dec811bbb4a1f1e22d239db5e48e&libraries=services"></script>
+
+    <script>
+        let num = 0;
+        let currentLat =0;
+        let currentLng =0;
+
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+            mapOption = {
+                center: new kakao.maps.LatLng(35.871389, 128.601389), // 지도의 중심좌표
+                level: 1 // 지도의 확대 레벨
+            };
+
+        // 지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // 주소-좌표 변환 객체를 생성합니다
+        var geocoder = new kakao.maps.services.Geocoder();
+
+        function searchAddrFromCoords(coords, callback) {
+            // 좌표로 행정동 주소 정보를 요청합니다
+            geocoder.coord2RegionCode(coords.getLng(), coords.getLat(),callback);
+ 
+        }
+
+        function searchDetailAddrFromCoords(coords, callback) {
+            // 좌표로 법정동 상세 주소 정보를 요청합니다
+            console.log(coords);
+            geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+        }
+
+        var printAddress = async function (result, status) {
+            if (status === kakao.maps.services.Status.OK) {
+                console.log(result);
+                console.log(status);
+                await 
+                num++;
+
+                //주소->좌표
+
+
+                {document.getElementById("data").innerHTML += num + "," + result[0].address.x + "," + result[0].y + "," + result[0].address.address_name +","+result[0].address.region_2depth_name+ "<br>"};
+
+               
+                // if(result[0].region_2depth_name!="북구"){
+                //     var latlng2 = new kakao.maps.LatLng(currentLat, currentLng-0.0025);
+                //     searchAddrFromCoords(latlng2, printAddressSecond);
+                // }else{
+                //     num++;
+                //     document.getElementById("data").innerHTML += num + "," + result[0].x + "," + result[0].y + "," + result[0].address_name +","+result[0].region_2depth_name+ "<br>";
+                // }
+
+            }
+        };
+
+        var printAddressSecond = function (result, status) {
+            if (status === kakao.maps.services.Status.OK) {
+
+                // console.log('지역 명칭 : ' + result[0].address_name);
+                // console.log('행정구역 코드 : ' + result[0].code);
+                //document.getElementById("data").innerHTML +="No!"+'<br>';
+                    
+                num++;
+                document.getElementById("data").innerHTML += num + "," + result[0].x + "," + result[0].y + "," + result[0].address_name +","+result[0].region_2depth_name+ "<br>";
+                
+            }
+        };
+
+        response = "";
+        function sleep(ms) {
+            const wakeUpTime = Date.now() + ms;
+            while (Date.now() < wakeUpTime) {}
+        }
+
+        const fetchData = async () => {
+            response = await fetch('filteredData.json');
+            data = await response.json();
+
+        
+            for (let i = 0; i < 100; i++) {
+
+                currentLat = data[i].y;
+                currentLng = data[i].x;
+                var latlng = new kakao.maps.LatLng(currentLat, currentLng);
+
+                searchDetailAddrFromCoords(latlng, printAddress);
+                // if(i==1000){
+                //     sleep(3000);
+                // }else if(i==2000){
+                //     sleep(3000);
+                // }else if(i==3000){
+                //     sleep(3000);
+                // }else if(i==4000){
+                //     sleep(3000);
+                // }else if(i==5000){
+                //     sleep(3000);
+                // }else if(i==6000){
+                //     sleep(3000);
+                // }else if(i==7000){
+                //     sleep(3000);
+                // }else if(i==8000){
+                //     sleep(3000);
+                // }else if(i==9000){
+                //     sleep(3000);
+                // }else if(i==10000){
+                //     sleep(3000);
+                // }else if(i==11000){
+                //     sleep(3000);
+                // }else if(i==12000){
+                //     sleep(3000);
+                // }else if(i==13000){
+                //     sleep(3000);
+                // }else if(i==14000){
+                //     sleep(3000);
+                // }else if(i==15000){
+                //     sleep(3000);
+                // }
+            }
+        };
+
+        fetchData();
+
+
+
+
+    </script>
+
+</body>
+
+</html>

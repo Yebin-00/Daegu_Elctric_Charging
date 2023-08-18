@@ -1,0 +1,396 @@
+//Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwM2MxYjg1Yi05OTIwLTQ2MTktYmJmYy02MDQzMjk3ZDYxYWUiLCJpZCI6OTAzNzYsImlhdCI6MTY1MDg4MjI3MH0.MVizpHnI1ckOcohHYXM4AewJ2gCBZS1GKHZG4u5hJig";
+Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwNTEyN2RjNS0xMWM2LTQwZWEtOTE0Mi0xYTI4OTYxOTU4MzIiLCJpZCI6OTAzNzYsImlhdCI6MTY1MDM0MzU0N30.S9MrZKc5JW6v8XWsIzHiYPX1xk8c45alY2LeaaaYmIE";
+
+
+const viewer = new Cesium.Viewer("cesiumContainer", {
+  terrainProvider: new Cesium.CesiumTerrainProvider({
+    url: Cesium.IonResource.fromAssetId(1),
+  }),
+});
+viewer.scene.globe.depthTestAgainstTerrain = true;
+
+var scene = viewer.scene;
+viewer.scene.globe.baseColor = Cesium.Color.TRANSPARENT;
+//viewer.scene.globe.baseColor = Cesium.Color.fromAlpha(Cesium.Color.RED, 0.5);
+
+var points = scene.primitives.add(new Cesium.PointPrimitiveCollection());
+
+var numPoints = 100;
+
+var tempLat = 0;
+var tempLon = 0;
+var alt = 0;
+
+const pos = [
+  {
+    "num" : 1,
+    "name" : "Green Pole(반여)",
+    "x" : 129.130673,
+    "y" : 35.1962593,
+    "color" : 1,
+    "doc": '\
+<p>\
+  num : 1 \
+</p>\
+<p>\
+x:129.130673 \
+</p>\
+<p>\
+y: 35.1962593 \
+</p>\
+<p>상태: 위험 </p>'
+  },{
+    "num" : 2,
+    "name" : "Green Pole(송정)",
+    "x" : 129.198745,
+    "y" : 35.1790748,
+    "color" : 2,
+    "doc": "hey",
+  },{
+    "num" : 3,
+    "name" : "경남아너스빌아파트",
+    "x" : 129.166893,
+    "y" : 35.1773779,
+    "color" : 3,
+    "doc": "hey",
+  },{
+    "num" : 4,
+    "name" : "남부산지사",
+    "x" : 129.144756,
+    "y" : 35.1602537,
+    "color" : 1,
+    "doc": "hey",
+  },{
+    "num" : 5,
+    "name" : "메가센텀꿈에그린아파트",
+    "x" : 129.122092,
+    "y" : 35.1981041,
+    "color" : 2,
+    "doc": "hey",
+  },{
+    "num" : 6,
+    "name" : "반여농산물도매시장관리사업소",
+    "x" : 129.120942,
+    "y" : 35.2159488,
+    "color" : 3,
+    "doc": "hey",
+  },{
+    "num" : 7,
+    "name" : "반여도서관",
+    "x" : 129.133821,
+    "y" : 35.2020523,
+    "color" : 1,
+    "doc": "hey",
+  },{
+    "num" : 8,
+    "name" : "벡스코",
+    "x" : 129.136033,
+    "y" : 35.1690857,
+    "color" : 2,
+    "doc": "hey",
+  },{
+    "num" : 9,
+    "name" : "벡스코 제2전시장",
+    "x" : 129.135036,
+    "y" : 35.1658051,
+    "color" : 3,
+    "doc": "hey",
+  },{
+    "num" : 10,
+    "name" : "부산디자인진흥원",
+    "x" : 129.129401,
+    "y" : 35.1740146,
+    "color" : 1,
+    "doc": "hey",
+  },{
+    "num" : 11,
+    "name" : "센텀동부센트레빌",
+    "x" : 129.124376,
+    "y" : 35.18379,
+    "color" : 2,
+    "doc": "hey",
+  },{
+    "num" : 12,
+    "name" : "시립미술관",
+    "x" : 129.137035,
+    "y" : 35.1667071,
+    "color" : 3,
+    "doc": "hey",
+  },{
+    "num" : 13,
+    "name" : "신세계 센텀점",
+    "x" : 129.129529,
+    "y" : 35.1688397,
+    "color" : 1,
+    "doc": "hey",
+  },{
+    "num" : 14,
+    "name" : "영화의전당",
+    "x" : 129.127096,
+    "y" : 35.1710632,
+    "color" : 2,
+    "doc": "hey",
+  },{
+    "num" : 15,
+    "name" : "지상변압기일체형",
+    "x" : 129.19656,
+    "y" : 35.1778168,
+    "color" : 3,
+    "doc": "hey",
+  },{
+    "num" : 16,
+    "name" : "청사포 공영주차장",
+    "x" : 129.191816,
+    "y" : 35.1621781,
+    "color" : 1,
+    "doc": "hey",
+  },{
+    "num" : 17,
+    "name" : "해운대구청별관",
+    "x" : 129.121424,
+    "y" : 35.1821116,
+    "color" : 2,
+    "doc": "hey",
+  },{
+    "num" : 18,
+    "name" : "해운대더샵센텀누리",
+    "x" : 129.128416,
+    "y" : 35.1783213,
+    "color" : 3,
+    "doc": "hey",
+  },{
+    "num" : 19,
+    "name" : "헤운대메트로하이츠",
+    "x" : 129.170782,
+    "y" : 35.1696757,
+    "color" : 1,
+    "doc": "hey",
+  },{
+    "num" : 20,
+    "name" : "홈플러스 센텀시티점",
+    "x" : 129.133667,
+    "y" : 35.1709477,
+    "color" : 2,
+    "doc": "hey",
+  }
+];
+
+pos.forEach(element =>
+           viewer.entities.add({
+  position : Cesium.Cartesian3.fromDegrees(element.x,element.y,100),
+  name : element.name,
+  x : element.x,
+  y : element.y,
+  description : element.doc,
+  point : {
+    pixelSize : 3,
+    color : Cesium.Color.RED,
+    outlineColor : Cesium.Color.WHITE,
+    outlineWidth : 1
+  },
+  label : {
+    text : element.name,
+    font : '10pt monospace',
+    style : Cesium.LabelStyle.FILL_AND_OUTLINE,
+    fillColor : Cesium.Color.YELLOW,
+    outlineColor: Cesium.Color.WHITE,
+    oulineWidth : 2,
+    verticalOrigin : Cesium.VerticalOrigin.BOTTOM,
+    pixelOffset : new Cesium.Cartesian2(0,-9)
+  }
+})
+);
+
+var center_x = Cesium.Cartographic.longitudeDD; //경도=세로선=x축
+var center_y = Cesium.Cartographic.latitudeDD;  //위도=가로선=y축
+
+var radius = 0.007;
+
+var subAngle = 360 / (25 * 2);
+var angle = 0;
+//var cos = Math.cos(angle * Math.PI/180);
+//var ar = new Array();
+var x_num = 0;
+var y_num = 0;
+
+
+viewer.selectedEntityChanged.addEventListener(function(selectedEntity) {
+  if (Cesium.defined(selectedEntity)) {
+      if (Cesium.defined(selectedEntity.name)) {
+        console.log('Selected ' + selectedEntity.name);
+        console.log('x' + selectedEntity.x);
+        
+        for (var j = 0; j < 25 * 2; j++) {
+          var _radius = radius;
+          if (j % 2 !== 0) {_radius = _radius / 2;}
+          //3x1 행렬 생성
+          var p = new Cesium.Cartesian3(_radius, _radius, 1);
+          //위에말한 3x3행렬은 아래와같이 Matrix3.fromRotationZ에 구현되어있고,파라미터로 각(라디안)을 넣는다.
+          var m = Cesium.Matrix3.fromRotationZ(Cesium.Math.toRadians(angle));
+          //두개를 곱하면 변환점이 나온다
+          var rotated = Cesium.Matrix3.multiplyByVector(m, p, new Cesium.Cartesian3());
+          //console.log(rotated);
+          //var coord = new Cesium.OgcPoint(center_x + rotated.x, center_y + rotated.y);
+          angle += subAngle;
+          //ar.push(coord);
+          //console.log((rotated.x+selectedEntity.x)+"  "+(rotated.y+selectedEntity.y));
+           x_num =rotated.x+selectedEntity.x;
+           y_num = rotated.y+selectedEntity.y;
+           let tmp = 1;
+
+           for(var num=0; num < pos.length; num++){
+             let a = pos[num].x;
+             let b = pos[num].y;
+
+             a = Math.pow((a - x_num),2);
+             b = Math.pow((b - y_num),2);
+
+             let c = Math.sqrt(a+b);
+
+             //console.log(c);
+
+             if(c < tmp){
+               tmp = c;
+               if(tmp<0.0025){
+                   points.add({
+                    position : Cesium.Cartesian3.fromDegrees(x_num, y_num, 100),
+                    show : true,
+                    color: Cesium.Color.RED,
+                    pixelSize: 10
+                  });
+               }else if(tmp<0.005){
+                   points.add({
+                    position : Cesium.Cartesian3.fromDegrees(x_num, y_num, 100),
+                    show : true,
+                    color: Cesium.Color.YELLOW,
+                    pixelSize: 10
+                  });
+               }else {
+                   points.add({
+                    position : Cesium.Cartesian3.fromDegrees(x_num, y_num, 100),
+                    show : true,
+                    color: Cesium.Color.GREEN,
+                    pixelSize: 10
+                  });               
+               }
+             }else if ( c>= tmp ) {
+               continue;
+             }else {
+               console.log("Error");
+             }
+           }
+
+       //     points.add({
+       //           position : Cesium.Cartesian3.fromDegrees((_rotated.x+selectedEntity.x), (_rotated.y+selectedEntity.y), 100),
+       //           show : true,
+       //           color: Cesium.Color.YELLOW,
+       //           pixelSize: 10
+       //       });
+
+        }
+        
+       for (var z = 0; z < 25 * 2; z++) {
+          var __radius = 0.01;
+          if (z % 2 !== 0) {__radius = __radius / 2;}
+          //3x1 행렬 생성
+          var pp = new Cesium.Cartesian3(__radius, __radius, 1);
+          //위에말한 3x3행렬은 아래와같이 Matrix3.fromRotationZ에 구현되어있고,파라미터로 각(라디안)을 넣는다.
+          var mm = Cesium.Matrix3.fromRotationZ(Cesium.Math.toRadians(angle));
+          //두개를 곱하면 변환점이 나온다
+          var _rotated = Cesium.Matrix3.multiplyByVector(mm, pp, new Cesium.Cartesian3());
+          //console.log(rotated);
+          //var coord = new Cesium.OgcPoint(center_x + rotated.x, center_y + rotated.y);
+          angle += subAngle;
+          //ar.push(coord);
+          //console.log((_rotated.x+selectedEntity.x)+"  "+(_rotated.y+selectedEntity.y));
+          
+         x_num =_rotated.x+selectedEntity.x;
+         y_num = _rotated.y+selectedEntity.y;
+         let tmp = 1;
+         
+         for(var _num=0; _num < pos.length; _num++){
+           let a = pos[_num].x;
+           let b = pos[_num].y;
+           
+           a = Math.pow((a - x_num),2);
+           b = Math.pow((b - y_num),2);
+           
+           let c = Math.sqrt(a+b);
+           
+           //console.log(c);
+           
+                        if(c < tmp){
+               tmp = c;
+               if(tmp<0.0025){
+                   points.add({
+                    position : Cesium.Cartesian3.fromDegrees(x_num, y_num, 100),
+                    show : true,
+                    color: Cesium.Color.RED,
+                    pixelSize: 10
+                  });
+               }else if(tmp<0.005){
+                   points.add({
+                    position : Cesium.Cartesian3.fromDegrees(x_num, y_num, 100),
+                    show : true,
+                    color: Cesium.Color.YELLOW,
+                    pixelSize: 10
+                  });
+               }else {
+                   points.add({
+                    position : Cesium.Cartesian3.fromDegrees(x_num, y_num, 100),
+                    show : true,
+                    color: Cesium.Color.GREEN,
+                    pixelSize: 10
+                  });               
+               }
+             }else if ( c>= tmp ) {
+               continue;
+             }else {
+               console.log("Error");
+             }
+           }
+         
+     //     points.add({
+     //           position : Cesium.Cartesian3.fromDegrees((_rotated.x+selectedEntity.x), (_rotated.y+selectedEntity.y), 100),
+     //           show : true,
+     //           color: Cesium.Color.YELLOW,
+     //           pixelSize: 10
+     //       });
+
+        }
+
+      } else {
+        console.log('Unknown entity selected.');
+      }
+  } else {
+    console.log('Deselected.');
+    points.removeAll();
+  }
+});
+
+
+const tileset = viewer.scene.primitives.add(
+  new Cesium.Cesium3DTileset({
+    url: Cesium.IonResource.fromAssetId(1027333),
+  })
+);
+
+
+(async () => {
+  try {
+    await tileset.readyPromise;
+    await viewer.zoomTo(viewer);
+
+    // Apply the default style if it exists
+    var extras = tileset.asset.extras;
+    if (
+      Cesium.defined(extras) &&
+      Cesium.defined(extras.ion) &&
+      Cesium.defined(extras.ion.defaultStyle)
+    ) {
+      tileset.style = new Cesium.Cesium3DTileStyle(extras.ion.defaultStyle);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+})();

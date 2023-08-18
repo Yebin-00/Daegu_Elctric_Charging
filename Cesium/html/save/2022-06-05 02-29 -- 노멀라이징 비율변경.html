@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Include the CesiumJS JavaScript and CSS files -->
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.93/Build/Cesium/Cesium.js"></script>
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.93/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+
+</head>
+<body>
+  <div id="cesiumContainer"></div>
+  <script>
+  Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwNTEyN2RjNS0xMWM2LTQwZWEtOTE0Mi0xYTI4OTYxOTU4MzIiLCJpZCI6OTAzNzYsImlhdCI6MTY1MDM0MzU0N30.S9MrZKc5JW6v8XWsIzHiYPX1xk8c45alY2LeaaaYmIE";
+
+
+const viewer = new Cesium.Viewer("cesiumContainer", {
+});
+
+var scene = viewer.scene;
+viewer.scene.globe.baseColor = Cesium.Color.TRANSPARENT;
+
+var points = scene.primitives.add(new Cesium.PointPrimitiveCollection());
+
+let x_center = 129.055628;
+let y_center = 35.137922;
+
+var range = 0.32;
+var x_num1 = 0;
+var x_num2 = 0;
+var y_num1 = 0;
+var y_num2 = 0;
+var gets = 100;
+var x_pos = 0;
+var y_pos = 0;
+var arr = [];
+
+const menu=[
+  {"fid":0,"SIG_CD":0,"SIG_KOR_NM":"ALL","sum":14632,"count":144,"avg":101.6,"char_count":197,"ratio_sum":74.3,"ratio_avg":0.5,"center_addr":"","center_x":0,"center_y":0,"radius":0,"center_addr2":"","center_x2":0,"center_y2":0,"radius2":0},
+  {"fid":1,"SIG_CD":27110,"SIG_KOR_NM":"중구","sum":1066,"count":12,"avg":88.8,"char_count":12,"ratio_sum":88.8,"ratio_avg":7.4,"center_addr":"대구광역시 중구 동성로3가 57","center_x":128.5937814,"center_y":35.867146,"radius":1.9,"center_addr2":"","center_x2":0,"center_y2":0,"radius2":0},
+{"fid":2,"SIG_CD":27140,"SIG_KOR_NM":"동구","sum":3378,"count":23,"avg":146.9,"char_count":30,"ratio_sum":112.6,"ratio_avg":4.9,"center_addr":"대구광역시 동구 평광동 1543-1","center_x":128.6883669,"center_y":35.9333894,"radius":10.3,"center_addr2":"","center_x2":0,"center_y2":0,"radius2":0},
+{"fid":3,"SIG_CD":27170,"SIG_KOR_NM":"서구","sum":497,"count":17,"avg":29.2,"char_count":15,"ratio_sum":33.1,"ratio_avg":1.9,"center_addr":"대구광역시 서구 평리동 1482-1","center_x":128.5475223,"center_y":35.8739444,"radius":2.9,"center_addr2":"","center_x2":0,"center_y2":0,"radius2":0},
+{"fid":4,"SIG_CD":27200,"SIG_KOR_NM":"남구","sum":505,"count":13,"avg":38.8,"char_count":11,"ratio_sum":45.9,"ratio_avg":3.5,"center_addr":"대구광역시 남구 대명동 386-2","center_x":128.5864481,"center_y":35.8363758,"radius":3,"center_addr2":"","center_x2":0,"center_y2":0,"radius2":0},
+{"fid":5,"SIG_CD":27230,"SIG_KOR_NM":"북구","sum":2085,"count":23,"avg":90.7,"char_count":35,"ratio_sum":59.6,"ratio_avg":2.6,"center_addr":"대구광역시 북구 조야동 산13","center_x":128.5772714,"center_y":35.9289439,"radius":7.2,"center_addr2":"","center_x2":0,"center_y2":0,"radius2":0},
+{"fid":6,"SIG_CD":27260,"SIG_KOR_NM":"수성구","sum":2323,"count":23,"avg":101,"char_count":34,"ratio_sum":68.3,"ratio_avg":3.0,"center_addr":"대구광역시 수성구 이천동 산62-2","center_x":128.6553836,"center_y":35.8437349,"radius":6.6,"center_addr2":"","center_x2":0,"center_y2":0,"radius2":0},
+{"fid":7,"SIG_CD":27290,"SIG_KOR_NM":"달서구","sum":2981,"count":22,"avg":135.5,"char_count":39,"ratio_sum":76.4,"ratio_avg":3.5,"center_addr":"대구광역시 달서구 월성동 산10-1","center_x":128.5378412,"center_y":35.8272059,"radius":6.5,"center_addr2":"","center_x2":0,"center_y2":0,"radius2":0},
+{"fid":8,"SIG_CD":27710,"SIG_KOR_NM":"달성군","sum":1797,"count":11,"avg":163.4,"char_count":21,"ratio_sum":85.6,"ratio_avg":7.8,"center_addr":"경상북도 청도군 각북면 오산리 산44-2","center_x":128.5527313,"center_y":35.7058068,"radius":19.4,"center_addr2":"대구광역시 달성군 다사읍 이천리 산55-1","center_x2":128.4518132,"center_y2":35.8828077,"radius2":6.3}
+];
+
+const pos = [  { "No":1,"name":"국채보상운동기념공원주차장","addr":"대구광역시 중구 공평로10길 25","x":128.6017131,"y":35.86844002,"state":"정좌표","number":197,"amount":3343 ,"zero":3343  },
+  { "No":2,"name":"대구시청","addr":"대구광역시 중구 공평로 88","x":128.6018555,"y":35.87142631,"state":"정좌표","number":257,"amount":4400 ,"zero":4400  },
+  { "No":3,"name":"서문주차빌딩","addr":"대구광역시 중구 큰장로26길 45","x":128.5807711,"y":35.86890633,"state":"정좌표","number":353,"amount":3815 ,"zero":3815  },
+  { "No":4,"name":"중구청","addr":"대구광역시 중구 국채보상로139길 1","x":128.6061586,"y":35.8693267,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":5,"name":"대신동 행정복지센터","addr":"대구광역시 중구 달구벌대로389길 50","x":128.5763395,"y":35.8655529,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":6,"name":"남산3동 행정복지센터","addr":"대구광역시 중구 남산로4길 70","x":128.5855595,"y":35.85991179,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":7,"name":"남산2동 행정복지센터","addr":"대구광역시 중구 명륜로 27-1","x":128.5895594,"y":35.86408255,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":8,"name":"대봉2동 행정복지센터","addr":"대구광역시 중구 대봉로47길 31","x":128.5993683,"y":35.85876412,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":9,"name":"동인동행정복지센터","addr":"대구광역시 중구 국채보상로142길 19-5","x":128.6091281,"y":35.86790523,"state":"정좌표","number":48,"amount":1531 ,"zero":1531  },
+  { "No":10,"name":"남산4동행정복지센터","addr":"대구광역시 중구 남산로1길 42","x":128.5805722,"y":35.8582235,"state":"정좌표","number":17,"amount":235 ,"zero":235  },
+  { "No":11,"name":"삼덕동행정복지센터","addr":"대구광역시 중구 달구벌대로447길 72-11","x":128.6089427,"y":35.86552799,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":12,"name":"대구시청(지하)","addr":"대구광역시 중구 공평로 88 (지하 주차장)","x":128.6018555,"y":35.87142631,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":13,"name":"갓바위공영3주차장","addr":"대구광역시 동구 진인동 123-30","x":128.7252083,"y":35.97014201,"state":"정좌표","number":43,"amount":539 ,"zero":539  },
+  { "No":14,"name":"갓바위공영5주차장","addr":"대구광역시 동구 진인동 123-12","x":128.7260827,"y":35.97058955,"state":"정좌표","number":49,"amount":1119 ,"zero":1119  },
+  { "No":15,"name":"동구청","addr":"대구광역시 동구 아양로 207","x":128.6360766,"y":35.88681372,"state":"정좌표","number":215,"amount":4481 ,"zero":4481  },
+  { "No":16,"name":"동대구복합환승센터","addr":"대구광역시 동구 동부로 153","x":128.629195,"y":35.87703362,"state":"인근좌표","number":194,"amount":3458 ,"zero":3458  },
+  { "No":17,"name":"율하체육공원3주차장","addr":"대구광역시 동구 금호강변로 278","x":128.6928376,"y":35.85992562,"state":"정좌표","number":173,"amount":3813 ,"zero":3813  },
+  { "No":18,"name":"첨단의료산업진흥재단","addr":"대구광역시 동구 동내로 88 커뮤니케이션센터 야외 주차장","x":128.7361271,"y":35.87864028,"state":"정좌표","number":137,"amount":3314 ,"zero":3314  },
+  { "No":19,"name":"환경공단안심관리소","addr":"대구광역시 동구 금호강변로 91","x":128.6814003,"y":35.86863045,"state":"정좌표","number":187,"amount":2725 ,"zero":2725  },
+  { "No":20,"name":"DTC섬유박물관","addr":"대구광역시 동구 팔공로 227","x":128.6402955,"y":35.9191,"state":"정좌표","number":137,"amount":2982 ,"zero":2982  },
+  { "No":21,"name":"반야월공영주차장","addr":"대구광역시 동구 신기동 174","x":128.7021116,"y":35.87261017,"state":"정좌표","number":38,"amount":869 ,"zero":869  },
+  { "No":22,"name":"파계사 공영주차장","addr":"대구광역시 동구 파계로 686","x":128.6371583,"y":35.99090071,"state":"정좌표","number":89,"amount":1693 ,"zero":1693  },
+  { "No":23,"name":"도평동 행정복지센터","addr":"대구광역시 동구 팔공로24길 171","x":128.6501302,"y":35.90997716,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":24,"name":"안심3.4동 행정복지센터","addr":"대구광역시 동구 안심로49길 98","x":128.7112177,"y":35.87027633,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":25,"name":"안심1동 행정복지센터","addr":"대구광역시 동구 율하동로 25길 5","x":128.7016306,"y":35.87043122,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":26,"name":"해안동 행정복지센터","addr":"대구광역시 동구 방촌로29길 46","x":128.6716753,"y":35.88208456,"state":"정좌표","number":111,"amount":2335 ,"zero":2335  },
+  { "No":27,"name":"동촌동 행정복지센터","addr":"대구광역시 동구 동촌로11길 5","x":128.6496353,"y":35.88993705,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":28,"name":"방촌동 행정복지센터","addr":"대구광역시 동구 동촌로48길 26","x":128.6652561,"y":35.88003395,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":29,"name":"효목1동 행정복지센터","addr":"대구광역시 동구 화랑로41길 46","x":128.6449371,"y":35.88162786,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":30,"name":"동촌유원지 입구 주차장","addr":"대구광역시 동구 효목동 1025","x":128.6498559,"y":35.87900153,"state":"정좌표","number":96,"amount":2270 ,"zero":2270  },
+  { "No":31,"name":"신암2동 행정복지센터","addr":"대구광역시 동구 신성로 56","x":128.6127016,"y":35.87997896,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":32,"name":"대구은행(신암동지점)","addr":"대구광역시 동구 아양로 2","x":128.6146226,"y":35.8809946,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":33,"name":"아주운수","addr":"대구광역시 동구 공항로 255","x":128.6410127,"y":35.89610929,"state":"정좌표","number":26,"amount":213 ,"zero":213  },
+  { "No":34,"name":"대구지식서비스센터","addr":"대구광역시 동구 동대구로 481","x":128.6248046,"y":35.87325113,"state":"정좌표","number":109,"amount":2653 ,"zero":2653  },
+  { "No":35,"name":"상공회의소","addr":"대구광역시 동구 동대구로 457","x":128.6249677,"y":35.8710745,"state":"정좌표","number":244,"amount":4710 ,"zero":4710  },
+  { "No":36,"name":"신암공원","addr":"대구광역시 동구 신암북로11길 6","x":128.622617,"y":35.88768408,"state":"정좌표","number":131,"amount":2801 ,"zero":2801  },
+  { "No":37,"name":"아양아트센터","addr":"대구광역시 동구 효동로2길 24","x":128.6519363,"y":35.87956399,"state":"정좌표","number":251,"amount":5617 ,"zero":5617  },
+  { "No":38,"name":"불로봉무동행정복지센터","addr":"대구광역시 동구 팔공로25길 16","x":128.6392894,"y":35.91038821,"state":"정좌표","number":5,"amount":109 ,"zero":109  },
+  { "No":39,"name":"지저동행정복지센터","addr":"대구광역시 동구 해동로3길 80","x":128.6382828,"y":35.8933933,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":40,"name":"효목2동행정복지센터","addr":"대구광역시 동구 화랑로25길 45","x":128.6412399,"y":35.87815834,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":41,"name":"공산동행정복지센터","addr":"대구광역시 동구 팔공로91길 9","x":128.6441612,"y":35.93998708,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":42,"name":"신암1동행정복지센터","addr":"대구광역시 동구 아양로7길 27","x":128.6163403,"y":35.88428962,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":43,"name":"대구의료원","addr":"대구광역시 서구 평리로 157","x":128.5400736,"y":35.85969545,"state":"정좌표","number":115,"amount":6341 ,"zero":6341  },
+  { "No":44,"name":"서구국민체육센터","addr":"대구광역시 서구 문화로 72","x":128.5409867,"y":35.87341174,"state":"정좌표","number":129,"amount":1555 ,"zero":1555  },
+  { "No":45,"name":"서구청","addr":"대구광역시 서구 국채보상로 257","x":128.5592895,"y":35.87232195,"state":"정좌표","number":212,"amount":3566 ,"zero":3566  },
+  { "No":46,"name":"충전인프라 관제센터","addr":"대구광역시 서구 상리동 649-5","x":128.5316981,"y":35.88497189,"state":"정좌표","number":147,"amount":3231 ,"zero":3231  },
+  { "No":47,"name":"대구환경공단(달서천)","addr":"대구광역시 서구 염색공단로 130","x":128.5427216,"y":35.88407908,"state":"인근좌표","number":85,"amount":1635 ,"zero":1635  },
+  { "No":48,"name":"상중이동 행정복지센터","addr":"대구광역시 서구 중리동 1085-3","x":128.5461515,"y":35.86698037,"state":"정좌표","number":166,"amount":4099 ,"zero":4099  },
+  { "No":49,"name":"서대구산업단지 근로자복지회관","addr":"대구광역시 서구 국채보상로 124","x":128.5447467,"y":35.86851172,"state":"정좌표","number":39,"amount":1303 ,"zero":1303  },
+  { "No":50,"name":"비산1동행정복지센터","addr":"대구광역시 서구 북비산로65길 18(비산동)","x":128.5689707,"y":35.88117185,"state":"정좌표","number":21,"amount":540 ,"zero":540  },
+  { "No":51,"name":"평리3동행정복지센터","addr":"대구광역시 서구 문화로 261(평리동)","x":128.5613,"y":35.87595554,"state":"정좌표","number":23,"amount":646 ,"zero":646  },
+  { "No":52,"name":"평리1동행정복지센터","addr":"대구광역시 서구 문화로 280(평리동)","x":128.5632615,"y":35.8755956,"state":"정좌표","number":5,"amount":53 ,"zero":53  },
+  { "No":53,"name":"비산4동행정복지센터","addr":"대구광역시 서구 국채보상로78길 29-4(비산동)","x":128.5743028,"y":35.86974988,"state":"정좌표","number":3,"amount":53 ,"zero":53  },
+  { "No":54,"name":"내당2,3동행정복지센터","addr":"대구광역시 서구 큰장로15길 11-1(내당동)","x":128.5745339,"y":35.86727753,"state":"정좌표","number":30,"amount":1102 ,"zero":1102  },
+  { "No":55,"name":"내당4동행정복지센터","addr":"대구광역시 서구 서대구로3길 46","x":128.5518431,"y":35.85902049,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":56,"name":"상리공원주차장","addr":"대구광역시 서구 중리동 1177","x":128.5339748,"y":35.86309633,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":57,"name":"비산7동행정복지센터","addr":"대구광역시 서구 서구 염색공단로5길 4","x":128.5535552,"y":35.88795925,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":58,"name":"충혼탑 주차장","addr":"대구광역시 남구 앞산순환로 540","x":128.5837349,"y":35.8322445,"state":"정좌표","number":336,"amount":5589 ,"zero":5589  },
+  { "No":59,"name":"대명3동 행정복지센터","addr":"대구광역시 남구 명덕로20길 115","x":128.5790577,"y":35.85230256,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":60,"name":"대명2동 행정복지센터","addr":"대구광역시 남구 명덕로32길 30","x":128.5863225,"y":35.85515365,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":61,"name":"남구청","addr":"대구광역시 남구 이천로 51","x":128.5978346,"y":35.84552398,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":62,"name":"봉덕3동 행정복지센터","addr":"대구광역시 남구 중앙대로22길 100","x":128.5959412,"y":35.84241851,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":63,"name":"대명5동 행정복지센터","addr":"대구광역시 남구 대명로58길 11","x":128.5878028,"y":35.84323175,"state":"정좌표","number":125,"amount":3200 ,"zero":3200  },
+  { "No":64,"name":"대명4동 행정복지센터","addr":"대구광역시 남구 두류공원로20길 19","x":128.5695084,"y":35.84597103,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":65,"name":"대명11동 행정복지센터","addr":"대구광역시 남구 관문시장4길 53","x":128.5606365,"y":35.83624168,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":66,"name":"이천동행정복지센터","addr":"대구광역시 남구 이천로28길 18(이천동)","x":128.5994185,"y":35.85368218,"state":"정좌표","number":15,"amount":349 ,"zero":349  },
+  { "No":67,"name":"봉덕2동행정복지센터","addr":"대구광역시 남구 이천로10길 50(봉덕동)","x":128.6011109,"y":35.84382728,"state":"정좌표","number":27,"amount":631 ,"zero":631  },
+  { "No":68,"name":"대명9동행정복지센터","addr":"대구광역시 남구 큰골길 53(대명동)","x":128.5790238,"y":35.8372365,"state":"정좌표","number":45,"amount":830 ,"zero":830  },
+  { "No":69,"name":"농수산물도매시장","addr":"대구광역시 북구 매천로18길 34","x":128.5425318,"y":35.9021357,"state":"정좌표","number":268,"amount":5685 ,"zero":5685  },
+  { "No":70,"name":"매천역환승공영주차장","addr":"대구광역시 북구 태전동 881-10","x":128.5427922,"y":35.91387816,"state":"정좌표","number":110,"amount":3553 ,"zero":3553  },
+  { "No":71,"name":"북구청","addr":"대구광역시 북구 옥산로 65","x":128.5833045,"y":35.88545422,"state":"정좌표","number":302,"amount":7426 ,"zero":7426  },
+  { "No":72,"name":"시청별관","addr":"대구광역시 북구 연암로 60","x":128.5970876,"y":35.89115552,"state":"정좌표","number":395,"amount":9693 ,"zero":9693  },
+  { "No":73,"name":"올브랜 주차장","addr":"대구광역시 북구 산격동 1671","x":128.6119922,"y":35.90549122,"state":"정좌표","number":27,"amount":759 ,"zero":759  },
+  { "No":74,"name":"패션센터 주차장","addr":"대구광역시 북구 유통단지로 14길 17","x":128.6117412,"y":35.90617925,"state":"정좌표","number":105,"amount":2043 ,"zero":2043  },
+  { "No":75,"name":"관음공영주차장","addr":"대구광역시 북구 관음중앙로 80","x":128.5446932,"y":35.94104958,"state":"정좌표","number":79,"amount":2106 ,"zero":2106  },
+  { "No":76,"name":"복현장미공원공영주차장","addr":"대구광역시 북구 복현동 439-1","x":128.6175054,"y":35.89318837,"state":"정좌표","number":74,"amount":1880 ,"zero":1880  },
+  { "No":77,"name":"대구 부광교회","addr":"대구광역시 북구 칠곡중앙대로52길38","x":128.5494828,"y":35.9216739,"state":"정좌표","number":314,"amount":7163 ,"zero":7163  },
+  { "No":78,"name":"구암동 행정복지센터","addr":"대구광역시 북구 구암서로 32","x":128.566041,"y":35.93893254,"state":"정좌표","number":217,"amount":5032 ,"zero":5032  },
+  { "No":79,"name":"한국도로공사 칠곡영업소","addr":"대구광역시 북구 관음로 41","x":128.5393414,"y":35.93450683,"state":"정좌표","number":133,"amount":2943 ,"zero":2943  },
+  { "No":80,"name":"태전1동 행정복지센터","addr":"대구광역시 북구 태전로7길 10-24","x":128.5434037,"y":35.92413288,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":81,"name":"유니버시아드 레포츠센터","addr":"대구광역시 북구 호국로57길 6","x":128.5979483,"y":35.92799875,"state":"정좌표","number":99,"amount":2742 ,"zero":2742  },
+  { "No":82,"name":"무태조야동 행정복지센터","addr":"대구광역시 북구 호국로43길 20","x":128.5970445,"y":35.9213512,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":83,"name":"아이빌","addr":"대구광역시 북구 3공단로 240","x":128.5769348,"y":35.90205856,"state":"정좌표","number":71,"amount":1367 ,"zero":1367  },
+  { "No":84,"name":"대구체육관 주차장","addr":"대구광역시 북구 대구체육관로 39","x":128.6030172,"y":35.89290315,"state":"정좌표","number":172,"amount":3521 ,"zero":3521  },
+  { "No":85,"name":"대구은행(3공단지점)","addr":"대구광역시 북구 노원동로 2","x":128.5715294,"y":35.89440759,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":86,"name":"명성 푸르지오","addr":"대구광역시 북구 침산로 153","x":128.5904541,"y":35.88946123,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":87,"name":"침산1차 푸르지오","addr":"대구광역시 북구 침산로21길 23","x":128.5868909,"y":35.88562917,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":88,"name":"대구은행 제2본점영업부","addr":"대구광역시 북구 옥산로 111","x":128.5882181,"y":35.88445306,"state":"정좌표","number":53,"amount":1148 ,"zero":1148  },
+  { "No":89,"name":"고성동 행정복지센터","addr":"대구광역시 북구 고성로31길 21","x":128.5835145,"y":35.88185509,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":90,"name":"대구사격장","addr":"대구광역시 북구 문주길 170","x":128.524326,"y":35.91130567,"state":"정좌표","number":10,"amount":297 ,"zero":297  },
+  { "No":91,"name":"동림플라자","addr":"대구광역시 북구 한강로8길 20","x":128.5175555,"y":35.8954766,"state":"정좌표","number":199,"amount":5840 ,"zero":5840  },
+  { "No":92,"name":"대구유통단지 전자관","addr":"대구광역시 북구 유통단지로 45","x":128.6070181,"y":35.90720333,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":93,"name":"운암지 공영주차장","addr":"대구광역시 북구 구암동 415-2","x":128.563765,"y":35.93129033,"state":"인근좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":94,"name":"대현동 행정복지센터","addr":"대구광역시 북구 대현남로 25","x":128.6057727,"y":35.88110679,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":95,"name":"대구지식산업센터","addr":"대구광역시 북구 오봉로 164","x":128.5797145,"y":35.90245507,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":96,"name":"동천동행정복지센터","addr":"대구광역시 북구 대천로 81(동천동)","x":128.5581816,"y":35.93732745,"state":"정좌표","number":57,"amount":1825 ,"zero":1825  },
+  { "No":97,"name":"관음동행정복지센터","addr":"대구광역시 북구 관음동로 125 (관음동)","x":128.5473269,"y":35.94425419,"state":"정좌표","number":43,"amount":1191 ,"zero":1191  },
+  { "No":98,"name":"검단동행정복지센터","addr":"대구광역시 북구 검단로41길 12 (검단동)","x":128.6272161,"y":35.9134626,"state":"정좌표","number":11,"amount":401 ,"zero":401  },
+  { "No":99,"name":"산격2동행정복지센터","addr":"대구광역시 북구 동북로31길 30","x":128.6092565,"y":35.90173502,"state":"정좌표","number":15,"amount":474 ,"zero":474  },
+  { "No":100,"name":"복현2동행정복지센터","addr":"대구광역시 북구 복현로8길 16-5","x":128.6254885,"y":35.89536208,"state":"정좌표","number":36,"amount":1153 ,"zero":1153  },
+  { "No":101,"name":"태전2동행정복지센터","addr":"대구광역시 북구 칠곡중앙대로52길 32","x":128.5487627,"y":35.92149203,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":102,"name":"산격1동행정복지센터","addr":"대구광역시 북구 연암로36길 6","x":128.5971032,"y":35.90051355,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":103,"name":"칠성동행정복지센터","addr":"대구광역시 북구 칠성로19길 4","x":128.6000193,"y":35.87922469,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":104,"name":"두산오거리(두산스포츠 북동편 도로 면)","addr":"대구광역시 수성구 두산동 954-14","x":128.624544,"y":35.82838917,"state":"인근좌표","number":67,"amount":2137 ,"zero":2137  },
+  { "No":105,"name":"수성구청","addr":"대구광역시 수성구 달구벌대로 2450","x":128.6300208,"y":35.85835349,"state":"정좌표","number":223,"amount":3715 ,"zero":3715  },
+  { "No":106,"name":"수성대학교 입구 우","addr":"대구광역시 수성구 달구벌대로 529길","x":128.6213958,"y":35.85993244,"state":"인근좌표","number":53,"amount":1717 ,"zero":1717  },
+  { "No":107,"name":"수성대학교 입구 좌","addr":"대구광역시 수성구 달구벌대로 528길","x":128.6501243,"y":35.85594966,"state":"인근좌표","number":74,"amount":2372 ,"zero":2372  },
+  { "No":108,"name":"시지근린공원(누리타운 서편 도로면)","addr":"대구광역시 수성구 달구벌대로 637길 5","x":128.7060374,"y":35.84135706,"state":"정좌표","number":46,"amount":1594 ,"zero":1594  },
+  { "No":109,"name":"어린이회관","addr":"대구광역시 수성구 동대구로 176","x":128.6270136,"y":35.84767227,"state":"정좌표","number":65,"amount":1330 ,"zero":1330  },
+  { "No":110,"name":"외환들공영주차장","addr":"대구광역시 수성구 미술관로 40","x":128.6743403,"y":35.82702862,"state":"정좌표","number":22,"amount":221 ,"zero":221  },
+  { "No":111,"name":"차량등록사업소1","addr":"대구광역시 수성구 동원로 84","x":128.639751,"y":35.86663137,"state":"정좌표","number":229,"amount":3979 ,"zero":3979  },
+  { "No":112,"name":"파동교네거리주차장","addr":"대구광역시 수성구 파동 274","x":128.6221493,"y":35.81146986,"state":"정좌표","number":253,"amount":6018 ,"zero":6018  },
+  { "No":113,"name":"대구환경공단(지산)","addr":"대구광역시 수성구 무학로 112","x":128.6205773,"y":35.82937438,"state":"정좌표","number":201,"amount":4190 ,"zero":4190  },
+  { "No":114,"name":"차량등록사업소(본소)","addr":"대구광역시 수성구 동원로 84","x":128.639751,"y":35.86663137,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":115,"name":"황금1동 행정복지센터","addr":"대구광역시 수성구 청호로57길 10","x":128.6381409,"y":35.84397692,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":116,"name":"대구은행 파동지점","addr":"대구광역시 수성구 수성로 5","x":128.6098758,"y":35.82598913,"state":"정좌표","number":162,"amount":4134 ,"zero":4134  },
+  { "No":117,"name":"지산근린공원 주차장","addr":"대구광역시 수성구 용학로 267","x":128.6376097,"y":35.8209278,"state":"정좌표","number":83,"amount":1693 ,"zero":1693  },
+  { "No":118,"name":"수성의료지구","addr":"대구광역시 수성구 노변동 544-1","x":128.6939786,"y":35.83460957,"state":"인근좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":119,"name":"명복공원 주차장","addr":"대구광역시 수성구 달구벌대로 541길 47","x":128.6586517,"y":35.85793869,"state":"정좌표","number":55,"amount":1004 ,"zero":1004  },
+  { "No":120,"name":"대구은행 시지지점","addr":"대구광역시 수성구 달구벌대로 3196","x":128.7061657,"y":35.84013416,"state":"정좌표","number":101,"amount":2064 ,"zero":2064  },
+  { "No":121,"name":"수성아트피아","addr":"대구광역시 수성구 무학로 180","x":128.6282745,"y":35.82928315,"state":"정좌표","number":152,"amount":3908 ,"zero":3908  },
+  { "No":122,"name":"수성의료지구(대구도시공사)","addr":"대구광역시 수성구 대흥동 286-1","x":128.6850322,"y":35.83782917,"state":"인근좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":123,"name":"대구은행 본점","addr":"대구광역시 수성구 달구벌대로 2310","x":128.6149475,"y":35.85931475,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":124,"name":"KS택시","addr":"대구광역시 수성구 희망로 226","x":128.623415,"y":35.84611814,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":125,"name":"저소득층 밀집지구 지식산업센터","addr":"대구광역시 수성구 알파시티1로 160","x":128.6824493,"y":35.835319,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":126,"name":"만촌2동행정복지센터","addr":"대구광역시 수성구 무열로 12","x":128.647228,"y":35.85986045,"state":"정좌표","number":15,"amount":233 ,"zero":233  },
+  { "No":127,"name":"만촌3동행정복지센터","addr":"대구광역시 수성구 교학로2길 45","x":128.6505651,"y":35.85550223,"state":"정좌표","number":51,"amount":787 ,"zero":787  },
+  { "No":128,"name":"중동행정복지센터","addr":"대구광역시 수성구 수성로50길 38","x":128.6150885,"y":35.8473452,"state":"정좌표","number":56,"amount":831 ,"zero":831  },
+  { "No":129,"name":"상동행정복지센터","addr":"대구광역시 수성구 들안로9길 56","x":128.6154609,"y":35.83212667,"state":"정좌표","number":25,"amount":1110 ,"zero":1110  },
+  { "No":130,"name":"지산1동행정복지센터","addr":"대구광역시 수성구 지범로21길 16","x":128.6370066,"y":35.82491392,"state":"정좌표","number":70,"amount":1540 ,"zero":1540  },
+  { "No":131,"name":"고산2동행정복지센터","addr":"대구광역시 수성구 달구벌대로 3091","x":128.695185,"y":35.84347596,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":132,"name":"고산3동행정복지센터","addr":"대구광역시 수성구 고산로 152","x":128.7065707,"y":35.84393916,"state":"정좌표","number":25,"amount":765 ,"zero":765  },
+  { "No":133,"name":"신매공원노상주자창","addr":"대구광역시 수성구 신매동 590-1(도로변)","x":128.7094206,"y":35.83284488,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":134,"name":"범어1동행정복지센터","addr":"대구광역시 수성구 범어천로 97","x":128.6220458,"y":35.85552855,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":135,"name":"지산2동행정복지센터","addr":"대구광역시 수성구 용학로33길 9","x":128.6280129,"y":35.82312125,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":136,"name":"범물1동행정복지센터","addr":"대구광역시 수성구 범안로 76","x":128.6459743,"y":35.81775147,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":137,"name":"수성소방서","addr":"대구 수성구 달구벌대로 3091","x":128.695185,"y":35.84347596,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":138,"name":"달서구청","addr":"대구광역시 달서구 학산로 45","x":128.5322939,"y":35.82952502,"state":"정좌표","number":247,"amount":4667 ,"zero":4667  },
+  { "No":139,"name":"대구도시철도공사","addr":"대구광역시 달서구 월배로 250","x":128.5404334,"y":35.81910359,"state":"정좌표","number":168,"amount":3778 ,"zero":3778  },
+  { "No":140,"name":"두류공원(성당휴게소)","addr":"대구광역시 달서구 공원순환로 216","x":128.5615941,"y":35.84454462,"state":"정좌표","number":302,"amount":3897 ,"zero":3897  },
+  { "No":141,"name":"서부법원 앞(롯데캐슬입구)","addr":"대구광역시 달서구 용산동 230-5","x":128.5285975,"y":35.85183165,"state":"정좌표","number":193,"amount":3974 ,"zero":3974  },
+  { "No":142,"name":"성서체육공원주차장","addr":"대구광역시 달서구 성서공단로22길 25","x":128.4955466,"y":35.83242591,"state":"정좌표","number":100,"amount":2431 ,"zero":2431  },
+  { "No":143,"name":"성서홈플러스","addr":"대구광역시 달서구 달구벌대로 1467","x":128.5274057,"y":35.84945335,"state":"정좌표","number":42,"amount":816 ,"zero":816  },
+  { "No":144,"name":"시설안전관리사업소","addr":"대구광역시 달서구 성서공단로 58","x":128.4887377,"y":35.83466285,"state":"정좌표","number":173,"amount":3431 ,"zero":3431  },
+  { "No":145,"name":"월광수변공원주차장","addr":"대구광역시 달서구 도원동 928","x":128.5489498,"y":35.79890606,"state":"정좌표","number":144,"amount":2722 ,"zero":2722  },
+  { "No":146,"name":"대구환경공단(본부)","addr":"대구광역시 달서구 대천동 770","x":128.4959611,"y":35.823318,"state":"정좌표","number":153,"amount":1641 ,"zero":1641  },
+  { "No":147,"name":"용산2동 행정복지센터","addr":"대구광역시 달서구 선원로 278","x":128.5229904,"y":35.85843009,"state":"정좌표","number":156,"amount":3930 ,"zero":3930  },
+  { "No":148,"name":"차량등록사업소 서부분소","addr":"대구광역시 달서구 성서로 400","x":128.5078593,"y":35.85330182,"state":"정좌표","number":252,"amount":4674 ,"zero":4674  },
+  { "No":149,"name":"성당두산위브","addr":"대구광역시 달서구 당산로 82","x":128.5466934,"y":35.84502695,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":150,"name":"본리동 행정복지센터","addr":"대구광역시 달서구 당산로 37-14","x":128.5431652,"y":35.84101301,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":151,"name":"대구은행 본리동지점","addr":"대구광역시 달서구 구마로 180","x":128.5474142,"y":35.83690545,"state":"정좌표","number":103,"amount":2429 ,"zero":2429  },
+  { "No":152,"name":"송현2동 행정복지센터","addr":"대구광역시 달서구 월배로83길 120-14","x":128.5455818,"y":35.83278771,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":153,"name":"수목원삼성래미안","addr":"대구광역시 달서구 상화로8길 23","x":128.5176797,"y":35.806398,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":154,"name":"진천동 행정복지센터","addr":"대구광역시 달서구 진천동 626-31","x":128.5227378,"y":35.8120305,"state":"정좌표","number":182,"amount":3699 ,"zero":3699  },
+  { "No":155,"name":"대구은행(월배지점)","addr":"대구광역시 달서구 월배로 109","x":128.5262531,"y":35.81478641,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":156,"name":"대덕승마장","addr":"대구광역시 달서구 앞산순환로 206","x":128.5548763,"y":35.82190898,"state":"정좌표","number":40,"amount":734 ,"zero":734  },
+  { "No":157,"name":"장기공영주차장","addr":"대구광역시 달서구 장기동 817-1","x":128.5296275,"y":35.84329402,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":158,"name":"월촌공원주차장","addr":"대구광역시 달서구 상인로 68-4","x":128.5489513,"y":35.81278399,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":159,"name":"대구도시철도공사2(대영)","addr":"대구광역시 달서구 월배로 250","x":128.5404334,"y":35.81910359,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":160,"name":"대구테크노파크 신기술산업지원센터","addr":"대구광역시 달서구 성서공단로 46-17","x":128.4882946,"y":35.83285776,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":161,"name":"상호림공원","addr":"대구광역시 달서구 호림동 1-6","x":128.4795968,"y":35.83775952,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":162,"name":"용산1동행정복지센터","addr":"대구광역시 달서구 용산로 212-7","x":128.5312239,"y":35.8566625,"state":"정좌표","number":26,"amount":626 ,"zero":626  },
+  { "No":163,"name":"감삼동행정복지센터","addr":"대구광역시 달서구 감삼북길 119-10","x":128.5421792,"y":35.85102665,"state":"정좌표","number":17,"amount":463 ,"zero":463  },
+  { "No":164,"name":"두류1,2동행정복지센터","addr":"대구광역시 달서구 성당로51길 32","x":128.5721971,"y":35.85568742,"state":"정좌표","number":9,"amount":190 ,"zero":190  },
+  { "No":165,"name":"성당동행정복지센터","addr":"대구광역시 달서구 야외음악당로 38","x":128.5531474,"y":35.84061372,"state":"정좌표","number":23,"amount":508 ,"zero":508  },
+  { "No":166,"name":"월성2동행정복지센터","addr":"대구광역시 달서구 월성로 65","x":128.5282742,"y":35.83094908,"state":"정좌표","number":44,"amount":1343 ,"zero":1343  },
+  { "No":167,"name":"본동행정복지센터","addr":"대구광역시 달서구 구마로26길 62","x":128.541042,"y":35.83444093,"state":"정좌표","number":30,"amount":1116 ,"zero":1116  },
+  { "No":168,"name":"월성1동행정복지센터","addr":"대구광역시 달서구 조암남로 97","x":128.5228367,"y":35.819515,"state":"정좌표","number":77,"amount":1464 ,"zero":1464  },
+  { "No":169,"name":"상인2동행정복지센터","addr":"대구광역시 달서구 상원로 27","x":128.5362624,"y":35.81255812,"state":"정좌표","number":39,"amount":785 ,"zero":785  },
+  { "No":170,"name":"상인1동행정복지센터","addr":"대구광역시 달서구 상인서로 40","x":128.5450096,"y":35.81426535,"state":"정좌표","number":26,"amount":352 ,"zero":352  },
+  { "No":171,"name":"송현1동행정복지센터","addr":"대구광역시 달서구 중흥로8길 41","x":128.5547573,"y":35.82923413,"state":"정좌표","number":28,"amount":650 ,"zero":650  },
+  { "No":172,"name":"도원동행정복지센터","addr":"대구광역시 달서구 한실로 53","x":128.5321898,"y":35.8074824,"state":"정좌표","number":35,"amount":761 ,"zero":761  },
+  { "No":173,"name":"다사읍행정복지센터 서재출장소","addr":"대구광역시 달성군 다사읍 서재본길 25","x":128.4942567,"y":35.87222087,"state":"정좌표","number":16,"amount":507 ,"zero":507  },
+  { "No":174,"name":"가창면행정복지센터","addr":"대구광역시 달성군 가창로 1100","x":128.6230237,"y":35.80243192,"state":"정좌표","number":67,"amount":777 ,"zero":777  },
+  { "No":175,"name":"화원읍행정복지센터","addr":"대구광역시 달성군 화원읍 비슬로 2594","x":128.5007188,"y":35.80423352,"state":"정좌표","number":40,"amount":977 ,"zero":977  },
+  { "No":176,"name":"논공읍행정복지센터","addr":"대구광역시 달성군 논공읍 비슬로 1779","x":128.4204628,"y":35.77418923,"state":"정좌표","number":10,"amount":105 ,"zero":105  },
+  { "No":177,"name":"옥포읍행정복지센터","addr":"대구광역시 달성군 옥포읍 비슬로 2215","x":128.4634038,"y":35.7893939,"state":"정좌표","number":9,"amount":386 ,"zero":386  },
+  { "No":178,"name":"현풍읍행정복지센터","addr":"대구광역시 달성군 현풍읍 비슬로134길 157","x":128.4475718,"y":35.69724955,"state":"정좌표","number":20,"amount":480 ,"zero":480  },
+  { "No":179,"name":"신당동행정복지센터","addr":"대구광역시 달서구 선원로 60","x":128.4988313,"y":35.85896696,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":180,"name":"두류3동행정복지센터","addr":"대구광역시 달서구 야외음악당로39길 24","x":128.5554702,"y":35.85369882,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":181,"name":"상인3동행정복지센터","addr":"대구광역시 달서구 상인로 25","x":128.5502024,"y":35.810066,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":182,"name":"유천동 행정복지센터","addr":"대구광역시 달서구 조암로 175","x":128.5139384,"y":35.81725189,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":183,"name":"논공읍 논공공단출장소","addr":"대구광역시 달성군 논공읍 논공중앙로 33길 3","x":128.4527824,"y":35.73003901,"state":"정좌표","number":165,"amount":2626 ,"zero":2626  },
+  { "No":184,"name":"달성군청","addr":"대구광역시 달성군 논공읍 달성군청로 33","x":128.4313894,"y":35.77466292,"state":"정좌표","number":134,"amount":3423 ,"zero":3423  },
+  { "No":185,"name":"대구과학관","addr":"대구광역시 달성군 유가면 테크노대로6길 20","x":128.4659878,"y":35.68837343,"state":"정좌표","number":78,"amount":1991 ,"zero":1991  },
+  { "No":186,"name":"다사읍행정복지센터","addr":"대구광역시 달성군 다사읍 매곡로 7","x":128.4539695,"y":35.8618255,"state":"정좌표","number":253,"amount":4958 ,"zero":4958  },
+  { "No":187,"name":"달성군 농업기술센터","addr":"대구광역시 달성군 옥포면 비슬로 2040","x":128.4468507,"y":35.7826012,"state":"정좌표","number":137,"amount":2398 ,"zero":2398  },
+  { "No":188,"name":"문양역 야외주차장","addr":"대구광역시 달성군 다사읍 문양리 470","x":128.4384773,"y":35.86387965,"state":"정좌표","number":87,"amount":1444 ,"zero":1444  },
+  { "No":189,"name":"비슬산자연휴양림공영주차장","addr":"대구광역시 달성군 유가면 용리15","x":128.5039327,"y":35.69364206,"state":"정좌표","number":12,"amount":392 ,"zero":392  },
+  { "No":190,"name":"한국산업단지 달성출장소","addr":"대구광역시 달성군 구지면 달성2차동1로 109","x":128.4194236,"y":35.64094271,"state":"정좌표","number":62,"amount":1474 ,"zero":1474  },
+  { "No":191,"name":"하빈면 행정복지센터","addr":"대구광역시 달성군 하빈면 하빈로84길 1","x":128.4455528,"y":35.90126042,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":192,"name":"다사체육공원 주차장","addr":"대구광역시 달성군 다사읍 이천리 30-1","x":128.4776988,"y":35.89031671,"state":"정좌표","number":122,"amount":2586 ,"zero":2586  },
+  { "No":193,"name":"옥포면 행정복지센터","addr":"대구광역시 달성군 옥포면 비슬로 2215","x":128.4634038,"y":35.7893939,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":194,"name":"지능형자동차부품연구원","addr":"대구광역시 달성군 구지면 국가산단서로 201","x":128.4048891,"y":35.64517207,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":195,"name":"유가읍행정복지센터","addr":"대구광역시 달성군 유가읍 테크노상업로 95","x":128.4596465,"y":35.69433414,"state":"정좌표","number":0,"amount":0 ,"zero":1454  },
+  { "No":196,"name":"달성문화센터","addr":"대구광역시 달성군 다사읍 대실역북로2길 188","x":128.4609552,"y":35.8654753,"state":"정좌표","number":136,"amount":3470 ,"zero":3470  },
+  { "No":197,"name":"한국도로공사(유천IC)","addr":"대구광역시 달성군 화원읍 구라리 1553-12","x":128.501426,"y":35.81083359,"state":"정좌표","number":0,"amount":0 ,"zero":1454  }];
+
+//const url = "http://hammi.dothome.co.kr/data.txt";
+//const url = "http://hammi.dothome.co.kr/filteredData.json";
+//const promise = Cesium.Resource.fetchJson({
+//    url: url
+//});
+
+
+function refreshTokenRetryCallback(resource, error) {
+  console.log("B");
+  console.log(error);
+}
+
+function getData() {
+   return new Promise(function(resolve, reject) {
+    var data = new Cesium.Resource.fetchJson({
+        url: 'http://localhost:8080/all.json',
+        retryCallback: refreshTokenRetryCallback,
+        retryAttempts: 1
+      })
+    resolve(data);
+  });
+}
+
+const data = getData().then(function(resolvedData) {
+  console.log(resolvedData); 
+  return resolvedData;
+});
+
+function toHsl(percentage) {
+  let hue0 = 0; //red
+  let hue1 = 120; //green
+  var hue = (percentage * (hue1 - hue0)) + hue0;
+  return new Cesium.Color.fromHsl(hue/360,1,0.5,1);
+}
+
+function setEntity(x,y){
+  points.removeAll();
+  
+  let red_range = 0.0025;
+  let orange_range = 0.00375;
+  let yellow_range = 0.005;
+  let green_range = 0.00625;
+  let c = 0;
+  
+  data.then( data=> {
+  for(var z=0; z<data.length;z++){
+
+    let x_num = data[z].x-0.0025;
+    let y_num = data[z].y;
+    
+      let ratio_tmp = 0;
+      for(var l=0;l<menu.length;l++){
+        // let a = Math.pow((x_num - menu[l].center_x),2);
+        // let b = Math.pow((y_num - menu[l].center_y),2);
+
+        // let c = Math.sqrt(a+b);
+
+        if(data[z].fid === menu[l].fid){
+          // tmp = c;
+          ratio_tmp = menu[l].ratio_sum;
+        }
+
+      }
+
+      let tmp = 1;
+      let color_tmp = 0;
+      let array = [];
+
+      for(var l=0;l<pos.length;l++){
+        let a = Math.pow((x_num - pos[l].x),2);
+        let b = Math.pow((y_num - pos[l].y),2);
+
+        let c = Math.sqrt(a+b);
+
+        if(c<0.01){
+          array.push(pos[l]);
+        }
+
+        if(c<tmp){
+          tmp = c;
+          color_tmp = pos[l].zero;
+
+        }else if(c>=tmp){
+          continue;
+        }else{
+          console.log("Error");
+        }
+
+      }
+      
+      let sum_amount = 0;
+      let sum_num = 0;
+      let sum_zero =0;
+
+      for(let l=0; l<array.length; l++){
+        sum_num ++;
+        sum_amount+= array[l].amount;
+        sum_zero+= array[l].zero;
+      }
+
+      //tmp : 거리값
+      //color_tmp : 근처 사용량 값
+      //sum_zero : 0을 평균값으로 대체한 원이 겹치는 모든 사용량 값.
+      //ratio_tmp : 지역 비율값.
+
+      // tmp : 가까울수록 0 멀어질수록 1 // 기준 0~10km : 0.1
+      // sum_zero : 사용량이 많을 수록 1 적을수록 0 // 기준 0~12000
+      // ratio_tmp : 지역 비율 높을수록 1 낮을수록 0 // 기준 30~120
+      tmp_no = (tmp - 0) / (0.1-0)
+      // tmp_no = tmp_no>=1?1:tmp_no;
+      tmp_no = 1-tmp_no;
+
+      tmp_color = color_tmp * tmp_no;
+
+
+      tmp_color_no = (tmp_color - 0) / (9000-0)
+      tmp_color_no = tmp_color_no>=1?1:tmp_color_no;
+      sum_zero_no = (sum_amount - 0) / (12000-0)
+      sum_zero_no = sum_zero_no>=1?1:sum_zero_no;
+      ratio_no = (ratio_tmp - 30) / (120-30)
+      ratio_no = ratio_no>=1?1:ratio_no;
+
+      all_sum = tmp_color_no+sum_zero_no+ratio_no 
+      all_sum /=3;
+
+      let say = "거리 : " + tmp + " 값 : " + sum_amount + "\n" + "tmp_no : " + tmp_color_no  + " sum_zero_no : " + sum_zero_no + " ratio_no : " + ratio_no +"\n"+ "all_no : " + all_sum;
+      viewer.entities.add({
+              position : Cesium.Cartesian3.fromDegrees(x_num,y_num,10),
+              name : data[z].num,
+              x : x_num,
+              y : y_num,
+              description : say,
+              point : {
+                pixelSize : 5,
+                color : toHsl(all_sum),
+              },
+            
+        })
+
+    }
+  })
+}
+
+
+pos.forEach(element =>
+
+  viewer.entities.add({
+  position : Cesium.Cartesian3.fromDegrees(element.x,element.y,10),
+  name : element.name,
+  x : element.x,
+  y : element.y,
+  point : {
+    pixelSize : 4,
+    color : element.zero===0?Cesium.Color.WHITE : 
+    element.zero<=1000? Cesium.Color.LIGHTBLUE :
+    element.zero<=2000? Cesium.Color.ROYALBLUE :
+    element.zero<=3000? Cesium.Color.DARKBLUE :
+    Cesium.Color.BLACK ,
+    outlineWidth : 1
+  },
+ 
+})
+);
+
+setEntity(x_center,y_center);
+
+(async () => {
+  try {
+    const resource = await Cesium.IonResource.fromAssetId(1048577);
+    const dataSource = await Cesium.GeoJsonDataSource.load(resource,{fill: new Cesium.Color(0,0,0,0)});
+    await viewer.dataSources.add(dataSource);
+  } catch (error) {
+    console.log(error);
+  }
+})();
+
+
+(async () => {
+  try {
+    await viewer.zoomTo(viewer);
+
+  } catch (error) {
+    console.log(error);
+  }
+})();
+
+
+  </script>
+ </div>
+</body>
+</html>

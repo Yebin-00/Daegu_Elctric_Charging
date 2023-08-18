@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>전기차 입지 추천</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/3efa40f06c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<style>
+		@font-face {
+		    font-family: 'SBAggroB';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		@font-face {
+		    font-family: 'SBAggroM';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		@font-face {
+		    font-family: 'SBAggroL';
+		    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+		body{
+			padding: 0;
+			margin : 0;
+		}
+		.main {
+			height: 	100%;
+		}
+		.main_Sub{
+			height: 	100%;
+			align-content: center;
+		}
+		.box {
+		  height: 100vh;
+		  border:1px solid silver; 
+		}
+		.grid {
+		  background-size: 10px, 30px, 10px 10px, 30px 30px;
+		  background-image: linear-gradient(90deg, #00000004 1px, transparent 1px), linear-gradient(90deg, #00000004 1px, transparent 1px), linear-gradient(#00000004 1px, transparent 1px), linear-gradient(#00000004 1px, transparent 1px);
+		}
+		.header{
+			background-color: #404040;
+			height: 50px;
+		}
+		.footer{
+			background-color: #404040;
+			height: 50px;
+		}
+		.mainText{
+			background-color: #4C4C4C;
+			color: white;
+			font-family: 'SBAggroB';
+			margin:0;
+			padding-top: 10px;
+			padding-left: 20px
+		}
+		.subText{
+			color: #4C4C4C;
+			font-family: 'SBAggroM';
+			padding-left: 20px
+		}
+		.indexText{
+			font-family: 'SBAggroL';
+			font-size: 30px;
+			color: #4C4C4C;
+			font-weight: bold;
+			letter-spacing:10px;
+		}
+		.mainSubIndex{
+			display: flex;
+ 		    justify-content: center;
+		    align-items: center;
+		}
+		.footerText{
+			font-family: 'SBAggroL';
+			letter-spacing:3px;
+		}
+		
+	</style>
+
+<!--본문 시작 -->
+<div class="container-fluid">
+	<div class="box grid">
+		<div class="header fixed-top">			
+		</div>
+
+			<!-- 메인 내용 -->
+			<div class="main">
+				  <div class="row main_Sub">
+					<div class="col-8">
+						<h1 class="display-6 subText">CesuimJS를 활용한 대구광역시</h1>
+						<h1 class="display-1 mainText">전기차 충전소 최적 입지 추천</h1>
+						<div style="margin-top:200px;"></div>
+
+						<!-- 주소 깃허브 작성 -->
+						<h1 class="display-6 subText">시연 주소 : yebin.ngrok.dev</h1>
+						<br>
+						<h1 class="display-6 subText">깃허브 : github.co.kr</h1>
+					</div>
+				    <div class="col-4 mainSubIndex">
+						<div class="d-flex flex-column mb-3 indexText">
+							<a class="link-secondary link-offset-2 link-underline link-underline-opacity-0" href="/outline"><div class="p-2 "><i class="fa-solid fa-circle-dot" style="color: #4C4C4C;"></i>  개요</div></a>
+							<a  class="link-secondary link-offset-2 link-underline link-underline-opacity-0" href="/data"><div class="p-2"><i class="fa-solid fa-circle-dot" style="color: #4C4C4C;"></i>  데이터</div></a>
+							<a  class="link-secondary link-offset-2 link-underline link-underline-opacity-0" href="/test"><div class="p-2"><i class="fa-solid fa-circle-dot" style="color: #4C4C4C;"></i>  시연</div></a>
+						</div>
+				    </div>
+				  </div>
+			</div>
+
+
+
+		<div class="footer fixed-bottom d-flex justify-content-center align-items-center footerText">
+			<p class="text-center text-white m-0">본 홈페이지는 pc에 최적화 되어 있습니다.</p>	
+			<p class="text-center text-white m-0">Copyrightⓒ2023 함예빈. All Rights Reserved.</p>	
+		</div>
+	</div>
+</div>
+</body>
+</html>
