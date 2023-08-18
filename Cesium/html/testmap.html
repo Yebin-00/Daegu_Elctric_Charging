@@ -117,8 +117,8 @@
           <button type="button" class="btn btn-warning" onclick="drawIndex(4)">사용량</button>
           <button type="button" class="btn btn-warning" onclick="drawIndex(5)">전기차대수</button>
           <button type="button" class="btn btn-warning" onclick="drawIndex(6)">전체</button>
-          <button type="button" class="btn btn-info" onclick="rankShow();setNdata();">추천위치</button>
-          <button type="button" class="btn btn-info" onclick="rankShow();setSortNdata();">추천위치</button>
+          <button type="button" class="btn btn-info" onclick="rankShow();setNdata();">구별추천위치</button>
+          <button type="button" class="btn btn-info" onclick="rankShow();setSortNdata();">중복확인 추천위치</button>
         </div>
         <div id="cesiumContainer"></div>
 			</div>
@@ -416,8 +416,8 @@
     function getData() {
       return new Promise(function (resolve, reject) {
         var data = new Cesium.Resource.fetchJson({
-          //url: 'https://yebin.ngrok.dev/all.json'
-          url: 'http://localhost:8081/all.json'
+          url: 'https://yebin.ngrok.dev/all.json'
+          //url: 'http://localhost:8081/all.json'
         })
         resolve(data);
       });
